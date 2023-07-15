@@ -1,15 +1,27 @@
 ---
+
+import Layaout from '../Layaout.astro';
+
+// components
+import Inicio from '../components/Inicio.astro'
+import Header from '../components/Header.astro';
+import SobreMi from '../components/SobreMi.astro'
+import Technology  from '../components/Tecnologias.astro'
+import Proyects from "../components/Proyectos.astro";
+import Formatio from "../components/Formacion.astro";
+import Contact from "../components/Contacto.astro";
+// Styles
+import '../style/main.css'
+
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layaout>
+	<Header />
+	<main>
+			<Inicio />
+			<Technology />
+			<Proyects />
+			<Formatio />
+			<Contact />
+	</main>
+</Layaout> 

@@ -1,0 +1,98 @@
+@use 'variables.scss';
+
+
+.home{
+    padding-top: 60px;
+    & .content__home{
+        margin-top: 55px;
+        & .content_profile{
+            display: block;
+            max-width: 320px;
+            margin:  0 auto;
+            & > img{
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        & .home__info{
+
+            h1{
+                font-weight: 900;
+                font-size:variables.$fs-h1-text ;
+                line-height: 40px;
+                color: #00d682;
+                span {
+                    font-size: 2.4rem;
+                }
+            }
+
+            & > p{
+                font-size: 1.3rem;
+                margin: 10px 0;
+            }
+
+            .about-me__info{
+                & p{
+                    line-height: 20px;
+                    max-width:70ch;
+                }
+                & > p:first-of-type{
+                    margin-bottom: 10px;
+                }
+            }
+
+            .download{
+                color: #ffffff;
+                // font-size: $fm-text;
+                margin-top: 20px;
+                padding: 13px 10px;
+                background-color:variables.$btn_bg ;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        & .content__home{
+            margin-top: 55px;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & .content_profile{
+                min-width: 275px;
+                padding: 0;
+            }
+    
+            & .home__info{
+                padding-left: 25px;
+                h1{
+                    font-size:variables.$fm-h1-text ;
+                    span {
+                        font-size: 2.4rem;
+                    }
+                }
+    
+                & > p{
+                    font-size: 1.450rem;
+                }
+
+                .about-me__info{
+                    & p{
+                        line-height: 22px;
+                    }
+                }
+
+                .download{
+                    color: #ffffff;
+                    margin-top: 20px;
+                    padding: 13px 18px;
+                    background-color:variables.$btn_bg ;
+                    border-radius: 5px;
+                }
+
+            }
+        }
+    }
+}

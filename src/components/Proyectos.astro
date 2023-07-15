@@ -1,0 +1,22 @@
+---
+import { Projects } from '../data/menuItem';
+// cards
+
+import Card from './cards/cards_proyect.astro';
+
+---
+
+
+
+<section id="proyectos" class="project">
+    <div class="content project__content">
+        <h2>Proyectos</h2>
+        <div class="cards">
+            
+            {
+                Projects.map((item)=> <Card item={item}/>)
+
+            }
+        </div>
+    </div>
+</section>

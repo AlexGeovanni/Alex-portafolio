@@ -1,0 +1,68 @@
+
+@use 'variables.scss';
+
+.formations{
+    padding: 20px 0;
+}
+
+.content__formations{
+
+    & h2{
+        font-size: variables.$fs-h2-text;
+        margin-bottom: 10px;
+    }
+
+    & .formation__info{
+        max-width: 380px;
+        display: flex;
+        align-items: center;
+        gap: 0 20px;
+        & .info__img {
+
+            display: block;
+            width: 150px;
+            & img {
+                width: 100%;
+                object-fit: cover;
+            }
+
+        }
+
+        & > div{
+            padding: 0 10px;
+            text-align: center;
+
+            & p{
+                line-height: 14px;
+                margin: 5px 0;
+            }
+            & span{
+                font-size: .8rem;
+            }
+        }
+
+    }
+
+    @media screen and (min-width:768px) {
+    
+        & .formation__info{
+            display: flex;
+            flex-direction: column;
+            gap: 15px 0;
+            & > div{
+                padding: 0 10px;
+                text-align: center;
+    
+                & p{
+                    line-height: 14px;
+                    margin: 5px 0;
+                }
+                & span{
+                    font-size: .850rem;
+                }
+            }
+    
+        }
+}
+
+}

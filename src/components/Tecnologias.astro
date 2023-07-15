@@ -1,0 +1,26 @@
+---
+import { Icons } from "../data/menuItem";
+
+---
+
+<section class="tech">
+    <div class="content content__tech">
+        <h2>Tecnologías</h2>
+        <p class="">
+            A lo largo de mi carrera universitaria he adquirido conocimientos en diferentes tecnologías, 
+            sí mismo he participado en cursos sobre programación lo cual he puesto en práctica.
+        </p>
+        <div class="tech__tech-icons">
+            <div class="leng">
+                {
+                    Icons.map((icon)=>
+                        <div class="tech__icon">
+                            <img src={`src/img/lenguajes/${icon.nameImg}`} alt={`${icon.title}`} />
+                            <span>{icon.title}</span>
+                        </div>
+                    )
+                }
+            </div>
+        </div>
+    </div>
+</section>

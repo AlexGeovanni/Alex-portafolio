@@ -1,0 +1,11 @@
+@use 'variables.scss';
+
+footer{
+    padding: 20px 0 25px 0;
+}
+
+.content__footer{
+    & p{
+        text-align: center;
+    }
+}

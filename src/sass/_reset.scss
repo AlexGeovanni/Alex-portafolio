@@ -1,0 +1,94 @@
+
+@use 'variables.scss';
+
+:root{
+    --Letra:'Lato', sans-serif;
+    scroll-behavior: smooth;
+    scroll-padding:75px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--Letra);
+}
+
+body{
+    color: #c8cdd0;
+    background:rgb(17 27 34);
+}
+
+li{
+    list-style: none;
+}
+
+input,textarea{
+    border: none;
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+.content{
+    max-width: 92%;
+    width: 100%;
+    margin: auto;
+    padding: 0 10px;
+}
+
+svg{
+    cursor: pointer;
+}
+
+// definir los tamaños de las tags
+
+h2{
+    font-size: variables.$fs-h2-text;
+}
+
+h3{
+    font-size: variables.$fs-h3-text;
+}
+p{
+    font-size: variables.$fs-text;
+}
+
+
+@media screen and (min-width:768px) {
+        .content{
+            width: 90%;
+    }
+
+    h2{
+        font-size: variables.$fm-h2-text;
+    }
+    
+    h3{
+        font-size: variables.$fm-h3-text;
+    }
+    p{
+        font-size: variables.$fm-text;
+    }
+}
+
+
+
+@media screen and (min-width:1024px) {
+        .content{
+            width: 75%;
+        }
+    
+        h2{
+            font-size: variables.$fg-h2-text;
+        }
+        
+        h3{
+            font-size: variables.$fg-h3-text;
+        }
+        p{
+            font-size: variables.$fg-text;
+        }
+}
