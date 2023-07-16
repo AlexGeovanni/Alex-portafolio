@@ -13,17 +13,6 @@
     font-family: var(--Letra);
 }
 
-body.dark-mod{
-    // color:variables.$color-text-d;
-    // background:variables.$color-body-d;
-    // h2{
-    //     color: variables.$color-title-d;
-    // }
-    
-    // h3{
-    //     color: variables.$color-title-d;
-    // }
-}
 
 body{
     color:variables.$color-text-l;
@@ -36,6 +25,18 @@ body{
         color: variables.$color-title-l;
     }
 }
+
+body.dark-mod{
+    color:variables.$color-text-d;
+    background:variables.$color-body-d;
+    h2{
+        color: variables.$color-title-d;
+    }
+    h3{
+        color: variables.$color-title-d;
+    }
+}
+
 
 li{
     list-style: none;

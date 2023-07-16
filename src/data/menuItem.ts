@@ -41,7 +41,7 @@ export const Projects:Array<ProjectItem> = [
     {
         nameImg:"peliculaApi",
         title:"Películas",
-        content:"Página web para buscar y ver los detalles de películas más recientes, con la API de TheMoviDB, responsivo y fue construida con las siguientes tecnologías:",
+        content:"Página web para buscar y ver los detalles de películas más recientes, con la API de TheMoviDB, responsivo,construida:",
         tecnologias:["React","Html5","Css3","JavaScript"],
         repos:"https://github.com/AlexGeovanni/Pagina_peli_react",
         deploy:"https://pagina-peli-react.vercel.app/"
@@ -50,7 +50,7 @@ export const Projects:Array<ProjectItem> = [
     {
         nameImg:"aluraflix",
         title:"AluraFlix",
-        content:"Sitio web para ver videos respecto a Alura, responsivo y fue construida con las siguientes tecnologías :",
+        content:"Sitio web para ver videos respecto a Alura, responsivo, construida con:",
         tecnologias:["React","Html5","Css3","JavaScript"],
         repos:"https://github.com/AlexGeovanni/Aluraflixx",
         deploy:"https://aluraflixx.vercel.app/"
@@ -64,7 +64,7 @@ export const Projects:Array<ProjectItem> = [
     {
         nameImg:"descriptador",
         title:"Descriptador",
-        content:"Encriptar y desencriptar texto, responsivo, fue construida con las siguientes tecnologías :",
+        content:"Encriptar y desencriptar texto, responsivo,construida con :",
         tecnologias:["Html5","Css3","JavaScript"],
         repos:"https://github.com/AlexGeovanni/Descriptador",
         deploy:"https://alexgeovanni.github.io/Descriptador/"
@@ -78,7 +78,7 @@ export const Projects:Array<ProjectItem> = [
     {
         nameImg:"repli_disney",
         title:"Disney",
-        content:"Réplica del inicio del sitio web de Disney, no es responsivo, fue construida con las siguientes tecnologías :",
+        content:"Réplica del inicio del sitio web de Disney, no es responsivo, construida con :",
         tecnologias:["Html5","Css3","JavaScript"],
         repos:"https://github.com/AlexGeovanni/miniProyect_Disney",
         deploy:"https://alexgeovanni.github.io/miniProyect_Disney/Interface_Disney/Index.html"

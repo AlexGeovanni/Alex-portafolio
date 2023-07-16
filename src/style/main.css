@@ -22,6 +22,17 @@ body h3 {
   color: #213a49;
 }
 
+body.dark-mod {
+  color: #C8CDD0;
+  background: rgb(17, 27, 34);
+}
+body.dark-mod h2 {
+  color: #EFF3F5;
+}
+body.dark-mod h3 {
+  color: #EFF3F5;
+}
+
 li {
   list-style: none;
 }
@@ -347,8 +358,8 @@ header {
 }
 .card .card__info > p {
   max-width: 50ch;
-  font-size: 0.95rem;
-  line-height: 14px;
+  font-size: 0.8rem;
+  line-height: 16px;
   margin: 4px 0;
 }
 .card .card__info .info__tech {
@@ -388,6 +399,9 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  .card .card__info > p {
+    font-size: 0.9rem;
   }
 }
 
