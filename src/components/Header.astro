@@ -40,15 +40,18 @@ let isShow=false
             </svg>
             
         </div>
-        <h1>{localStorage.getItem('icon')}</h1>
         </nav>
     </header>
 
     <script>
-        const changeColor = document.querySelector('#change-color')
-        localStorage.setItem("icon","true")
-        const icon = localStorage.getItem("icon")
-        changeColor.addEventListener('click',()=>{
-            alert(!icon)
-        })
+        // const changeColor = document.querySelector('#change-color')
+        // localStorage.setItem("icon","false")
+        
+        // changeColor.addEventListener('click',()=>{
+        //     const icon = JSON.parse(localStorage.getItem("icon"))
+        //     alert(icon)
+        //     if(icon=="false"){
+        //         localStorage.setItem("icon","true")
+        //     }
+        // })
     </script>

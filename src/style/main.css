@@ -88,10 +88,11 @@ p {
   }
 }
 header {
-  background-color: rgba(235, 232, 232, 0.8);
+  background-color: rgb(255, 255, 255);
   padding: 12px 0;
   position: fixed;
   width: 100%;
+  z-index: 100;
 }
 
 .Hearder__nav {
@@ -109,7 +110,7 @@ header {
 .Hearder__nav .nav__items {
   position: fixed;
   width: 100%;
-  top: 55px;
+  top: 56px;
   right: 0;
   opacity: 0;
   transform: translateY(-400px);
@@ -120,23 +121,23 @@ header {
   width: 90%;
   padding: 8px 12px;
   margin: auto;
-  background-color: #928f8f;
-  box-shadow: 1px 6px 20px -15px #000000;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 12px 15px -16px rgb(17, 27, 34);
   border-radius: 5px;
 }
 .Hearder__nav .nav__items ul li {
   border-radius: 5px;
 }
 .Hearder__nav .nav__items ul li > a {
-  color: #ffffff;
+  color: #000000;
   display: block;
   padding: 6px 4px;
   border-radius: 5px;
   font-weight: 400;
-  background-color: rgb(4, 66, 107);
 }
 .Hearder__nav .nav__items ul li > a:hover {
-  background-color: rgba(1, 78, 129, 0.2);
+  background-color: rgba(104, 185, 243, 0.3);
+  color: #1083D6;
   transition: background-color 0.3s ease-in-out;
 }
 .Hearder__nav .show {
@@ -302,7 +303,7 @@ header {
 .project__content .cards {
   display: flex;
   flex-flow: row wrap;
-  gap: 10px 0;
+  gap: 15px 0;
 }
 @media screen and (min-width: 768px) {
   .project__content .cards {
@@ -312,10 +313,22 @@ header {
 }
 
 .card {
+  position: relative;
   padding: 15px;
   background-color: #fdfdfd;
-  border: 1px solid #EDEFF0;
+  border: 2px solid #EDEFF0;
   border-radius: 5px;
+}
+.card::after {
+  position: absolute;
+  content: "";
+  top: -6px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #1083D6;
+  z-index: -10;
 }
 .card .card__img {
   display: block;

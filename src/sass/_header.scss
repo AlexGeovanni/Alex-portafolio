@@ -5,6 +5,7 @@ header{
     padding: 12px 0;
     position: fixed;
     width: 100%;
+    z-index: 100;
 }
 
 .Hearder__nav{
@@ -23,32 +24,34 @@ header{
     & .nav__items{
         position: fixed;
         width: 100%;
-        top: 55px;
+        top: 56px;
         right: 0;
         opacity: 0;
         transform: translateY(-400px);
         transition: opacity .1s ease-in-out;
         transition: transform .3s ease-in-out;
-
         & ul{
             width: 90%;
             padding: 8px 12px;
             margin: auto;
-            background-color: #928f8f;
-            box-shadow: 1px 6px 20px -15px #000000;
+            background-color: variables.$bg-header-l;
+            box-shadow: 1px 12px 15px -16px variables.$color-body-d;
             border-radius:5px;
             & li {
                 border-radius: 5px;
                 & > a{
-                    color: #ffffff;  
+                    color: #000000;  
                     display: block;
                     padding:6px 4px;
                     border-radius: 5px;
                     font-weight: 400;
-                    background-color: rgb(4, 66, 107);
+                    // background-color: rgb(4, 66, 107);
+                    
                     &:hover{
                         // background-color: rgba(2, 92, 151, 0.3);
-                        background-color: rgba(1, 78, 129,.2);
+                        // background-color: rgba(1, 78, 129,.2);
+                        background-color: rgba(104, 185, 243, 0.3);
+                        color: #1083D6; 
                         transition: background-color .3s ease-in-out;
                     }
                     
@@ -63,6 +66,7 @@ header{
         transition: opacity .1s ease-in-out;
         transition: transform .3s ease-in-out;
     }
+
 
     @media screen and (min-width:768px) {
         width: 80%;
