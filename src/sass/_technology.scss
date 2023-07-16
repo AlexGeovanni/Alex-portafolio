@@ -15,14 +15,14 @@
             margin-top: 10px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(75px,1fr));
+            
             gap: 7px;
-
             & .tech__icon{
                 width: 100%;
                 padding: 4px;
                 display: flex;
                 flex-flow: column nowrap;
-                justify-content: center;
+                justify-content: space-between;
                 img{
                     width: 55px;
                     margin: auto;
@@ -38,9 +38,13 @@
 
     @media screen and (min-width:768px) {
         .content__tech{
+            & div{
+                grid-template-columns: repeat(auto-fit, minmax(80px,1fr));
+            }
             & p{
                 max-width: 70ch;
             }
+
         }
 }
 }

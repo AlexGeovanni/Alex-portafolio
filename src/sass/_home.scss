@@ -1,6 +1,12 @@
 @use 'variables.scss';
 
-
+.redes{
+    margin: 10px 0;
+    padding: 0 5px;
+    & a:first-child{
+        margin-right: 5px;
+    }
+}
 .home{
     padding-top: 60px;
     & .content__home{
@@ -8,6 +14,7 @@
         & .content_profile{
             display: block;
             max-width: 320px;
+            width: 220px;
             margin:  0 auto;
             & > img{
                 width: 100%;
@@ -21,15 +28,18 @@
                 font-weight: 900;
                 font-size:variables.$fs-h1-text ;
                 line-height: 40px;
-                color: #00d682;
+                color: #014E81;
+                letter-spacing: -1px;
                 span {
                     font-size: 2.4rem;
+                    color: variables.$color-title-l;
                 }
             }
 
             & > p{
                 font-size: 1.3rem;
                 margin: 10px 0;
+                color: variables.$color-title-l;
             }
 
             .about-me__info{
@@ -44,10 +54,8 @@
 
             .download{
                 color: #ffffff;
-                // font-size: $fm-text;
-                margin-top: 20px;
                 padding: 13px 10px;
-                background-color:variables.$btn_bg ;
+                background-color:variables.$btn_bg;
                 border-radius: 5px;
             }
         }
@@ -58,24 +66,25 @@
             margin-top: 55px;
             padding-bottom: 20px;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            align-items: start;
             & .content_profile{
-                min-width: 275px;
+                min-width: 285px;
                 padding: 0;
             }
     
             & .home__info{
                 padding-left: 25px;
                 h1{
-                    font-size:variables.$fm-h1-text ;
+                    max-width: 15ch;
+                    font-size:variables.$fg-h1-text;
+                    line-height: 45px;
                     span {
-                        font-size: 2.4rem;
+                        font-size: 2.5rem;
                     }
                 }
     
                 & > p{
-                    font-size: 1.450rem;
+                    font-size: 1.4rem;
                 }
 
                 .about-me__info{
@@ -85,11 +94,7 @@
                 }
 
                 .download{
-                    color: #ffffff;
-                    margin-top: 20px;
-                    padding: 13px 18px;
-                    background-color:variables.$btn_bg ;
-                    border-radius: 5px;
+                    padding: 13px 22px;
                 }
 
             }

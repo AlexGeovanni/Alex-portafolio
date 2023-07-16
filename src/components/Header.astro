@@ -25,10 +25,10 @@ let isShow=false
                 </ul>
             </div>
         }
-        <div class="change-color">
+        <div id="change-color" class="change-color">
             <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
             <svg width="28px" height="28px" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="5" stroke="#1C274C" stroke-width="1.5"/>
+            <circle cx="12" cy="12" r="5" stroke="#f2f2f2" stroke-width="1.5"/>
             <path d="M12 2V4" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
             <path d="M12 20V22" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
             <path d="M4 12L2 12" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
@@ -38,6 +38,17 @@ let isShow=false
             <path opacity="1" d="M6.44434 17.5557L4.22211 19.7779" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
             <path opacity="1" d="M19.7778 19.7773L17.5558 17.5551" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
+            
         </div>
+        <h1>{localStorage.getItem('icon')}</h1>
         </nav>
     </header>
+
+    <script>
+        const changeColor = document.querySelector('#change-color')
+        localStorage.setItem("icon","true")
+        const icon = localStorage.getItem("icon")
+        changeColor.addEventListener('click',()=>{
+            alert(!icon)
+        })
+    </script>

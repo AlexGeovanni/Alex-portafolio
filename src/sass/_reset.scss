@@ -13,9 +13,28 @@
     font-family: var(--Letra);
 }
 
+body.dark-mod{
+    // color:variables.$color-text-d;
+    // background:variables.$color-body-d;
+    // h2{
+    //     color: variables.$color-title-d;
+    // }
+    
+    // h3{
+    //     color: variables.$color-title-d;
+    // }
+}
+
 body{
-    color: #c8cdd0;
-    background:rgb(17 27 34);
+    color:variables.$color-text-l;
+    background:variables.$color-body-l;
+    h2{
+        color: variables.$color-title-l;
+    }
+    
+    h3{
+        color: variables.$color-title-l;
+    }
 }
 
 li{
@@ -42,9 +61,6 @@ a{
 svg{
     cursor: pointer;
 }
-
-// definir los tamaños de las tags
-
 h2{
     font-size: variables.$fs-h2-text;
 }
@@ -55,7 +71,7 @@ h3{
 p{
     font-size: variables.$fs-text;
 }
-
+// definir los tamaños de las tags
 
 @media screen and (min-width:768px) {
         .content{
@@ -80,7 +96,6 @@ p{
         .content{
             width: 75%;
         }
-    
         h2{
             font-size: variables.$fg-h2-text;
         }

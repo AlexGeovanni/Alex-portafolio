@@ -1,11 +1,11 @@
 
-$fs-text:.9rem;
-$fm-text:.980rem;
+$fs-text:.950rem;
+$fm-text:1rem;
 $fg-text:1.1rem;
 
-$fs-h1-text:3rem;
-$fm-h1-text:3.350rem;
-$fg-h1-text:3.750rem;
+$fs-h1-text:2.4rem;
+$fm-h1-text:2.8rem;
+$fg-h1-text:3rem;
 
 $fs-h2-text:1.750rem;
 $fm-h2-text:1.850rem;
@@ -15,8 +15,29 @@ $fs-h3-text:1.250rem;
 $fm-h3-text:1.3rem;
 $fg-h3-text:1.350rem;
 
-$btn_bg:#149f6c;
-$title:#29b27e;
 
-$color-dark-secondary:#c1c1c1;
-$color-dark-primary:#c1c1c1;
+$btn_bg:#014E81;
+$title:#eFF3F5;
+
+
+// modo oscuro
+
+$color-body-d:rgba(17, 27, 34);// #111B22
+$color-title-d:#EFF3F5;
+$color-text-d:#C8CDD0;
+
+$color-border-d:#2A3B47;
+$color-box-d:#212E36;
+
+
+
+// modo light
+
+$bg-header-l:rgba(235, 232, 232, 0.8);
+
+$color-body-l:#FBFBFE;// #111B22
+$color-title-l:#213a49;
+$color-text-l:#50585a;
+
+$color-border-l:#EDEFF0;
+$color-box-l:#fdfdfd;

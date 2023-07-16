@@ -26,8 +26,8 @@
 // las cards
 .card {
     padding: 15px;
-    background-color: #212e36;
-    border: 1px solid #2a3b47;
+    background-color: variables.$color-box-l;
+    border: 1px solid variables.$color-border-l;
     border-radius: 5px;
     .card__img{
         display: block;
@@ -48,7 +48,7 @@
         }
 
         & > p{
-            max-width: 70ch;
+            max-width: 50ch;
             font-size: variables.$fs-text;
             line-height: 14px;
             margin: 4px 0;
@@ -84,7 +84,7 @@
 
     @media screen and (min-width:768px) {
         min-width: 280px;
-        max-width: calc(50% - 5px);
+        max-width: calc(50% - 18px);
         & .card__img{
             overflow: hidden;
             border-radius: 3px;
