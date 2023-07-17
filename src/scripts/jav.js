@@ -1,16 +1,27 @@
 
-const iconMenu = document.querySelector('header [data-menu ]') // se
-
 const Body = document.querySelector('body');
-const dark = document.querySelector('#dark')
-const light = document.querySelector('#light')
+const itemNav = document.querySelector('#items_nav')
+const Card = document.querySelectorAll('.card')
 
-const Nav = document.querySelector('[data-content_nav]')
-
-iconMenu.addEventListener('click',()=>{
-    Nav.classList.toggle('show')
-})
+// iconMenu.addEventListener('click',()=>{
+//     Nav.classList.toggle('show')
+// })
 
 light.addEventListener('click',()=>{
-    Body.classList.toggle('dark-mod')
+    light.style.display='none'
+    dark.style.display='block'
+    Toggle();
 })
+
+dark.addEventListener('click',(e)=>{
+    dark.style.display='none'
+    light.style.display='block'
+    Toggle();
+})
+
+
+function Toggle(){
+    Body.classList.toggle('dark-mod');
+    itemNav.classList.toggle('dark');
+    Card.forEach((i)=> i.classList.toggle('card-dark'))
+}

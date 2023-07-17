@@ -9,7 +9,7 @@ interface Itemss{
 const { item }:Itemss= Astro.props;
 ---
 
-<div class="card">
+<div id="card" class="card">
     <picture class="card__img">
         <img src={`img/img_projects/App_${item.nameImg}.jpg`} alt=`${item.title +"__"+ item.nameImg}`>
     </picture>

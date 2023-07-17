@@ -15,24 +15,35 @@ body {
   color: #50585a;
   background: #FBFBFE;
 }
+body header {
+  background-color: rgb(255, 255, 255);
+}
 body h2 {
-  color: #213a49;
+  color: #023a5c;
 }
 body h3 {
-  color: #213a49;
+  color: #023a5c;
 }
 
 body.dark-mod {
   color: #C8CDD0;
   background: rgb(17, 27, 34);
 }
+body.dark-mod header {
+  background-color: #0d161c;
+}
 body.dark-mod h2 {
-  color: #EFF3F5;
+  color: #e8ebec;
 }
 body.dark-mod h3 {
-  color: #EFF3F5;
+  color: #e8ebec;
 }
-
+body.dark-mod .content__home .home__info h1 span {
+  color: #e8ebec;
+}
+body.dark-mod .content__home > p.sub-title {
+  color: #e8ebec;
+}
 li {
   list-style: none;
 }
@@ -98,8 +109,12 @@ p {
     font-size: 1.1rem;
   }
 }
+@media screen and (min-width: 1680px) {
+  .content {
+    width: 60%;
+  }
+}
 header {
-  background-color: rgb(255, 255, 255);
   padding: 12px 0;
   position: fixed;
   width: 100%;
@@ -140,16 +155,22 @@ header {
   border-radius: 5px;
 }
 .Hearder__nav .nav__items ul li > a {
-  color: #000000;
+  color: #424647;
   display: block;
   padding: 6px 4px;
   border-radius: 5px;
   font-weight: 400;
 }
 .Hearder__nav .nav__items ul li > a:hover {
-  background-color: rgba(104, 185, 243, 0.3);
+  background-color: rgba(104, 185, 243, 0.2);
   color: #1083D6;
   transition: background-color 0.3s ease-in-out;
+}
+.Hearder__nav .nav__items ul.dark {
+  background-color: #0d161c;
+}
+.Hearder__nav .nav__items ul.dark li > a {
+  color: #e2e2e2;
 }
 .Hearder__nav .show {
   opacity: 1;
@@ -185,7 +206,7 @@ header {
 }
 
 .redes {
-  margin: 10px 0;
+  margin: 18px 0;
   padding: 0 5px;
 }
 .redes a:first-child {
@@ -212,17 +233,17 @@ header {
   font-weight: 900;
   font-size: 2.4rem;
   line-height: 40px;
-  color: #014E81;
+  color: #0475c0;
   letter-spacing: -1px;
 }
 .home .content__home .home__info h1 span {
   font-size: 2.4rem;
-  color: #213a49;
+  color: #023a5c;
 }
-.home .content__home .home__info > p {
-  font-size: 1.3rem;
+.home .content__home .home__info > h3 {
+  font-size: 1.25rem;
   margin: 10px 0;
-  color: #213a49;
+  font-weight: 400;
 }
 .home .content__home .home__info .about-me__info p {
   line-height: 20px;
@@ -234,7 +255,7 @@ header {
 .home .content__home .home__info .download {
   color: #ffffff;
   padding: 13px 10px;
-  background-color: #014E81;
+  background-color: #0a6cad;
   border-radius: 5px;
 }
 @media screen and (min-width: 768px) {
@@ -252,15 +273,17 @@ header {
     padding-left: 25px;
   }
   .home .content__home .home__info h1 {
-    max-width: 15ch;
+    max-width: 12ch;
     font-size: 3rem;
-    line-height: 45px;
+    line-height: 40px;
+    letter-spacing: 0px;
   }
   .home .content__home .home__info h1 span {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   .home .content__home .home__info > p {
-    font-size: 1.4rem;
+    margin: 18px 0;
+    font-size: 1.3rem;
   }
   .home .content__home .home__info .about-me__info p {
     line-height: 22px;
@@ -329,6 +352,10 @@ header {
   background-color: #fdfdfd;
   border: 2px solid #EDEFF0;
   border-radius: 5px;
+}
+.card.card-dark {
+  background-color: #212E36;
+  border: 2px solid #2A3B47;
 }
 .card::after {
   position: absolute;
@@ -540,7 +567,7 @@ header {
   font-size: 1.2rem;
   border-radius: 5px;
   border: none;
-  background-color: #014E81;
+  background-color: #0a6cad;
 }
 @media screen and (min-width: 768px) {
   .contact .content__contact > div {

@@ -14,9 +14,15 @@
 }
 
 
+//  modo light
 body{
     color:variables.$color-text-l;
     background:variables.$color-body-l;
+
+    & header{
+        background-color:variables.$bg-header-l;
+    }
+
     h2{
         color: variables.$color-title-l;
     }
@@ -26,15 +32,40 @@ body{
     }
 }
 
+//  modo dark
 body.dark-mod{
     color:variables.$color-text-d;
     background:variables.$color-body-d;
+    & header {
+        background-color:variables.$bg-header-d;
+    }
+    
     h2{
         color: variables.$color-title-d;
     }
     h3{
         color: variables.$color-title-d;
     }
+
+    .content__home{
+        & .home__info{
+            h1{
+                span {
+                    color: variables.$color-title-d;
+                }
+            }
+        }
+        & > p.sub-title{
+            color: variables.$color-title-d;
+        }
+    }
+
+    .redes{
+        & svg{
+            // fill:#afa9a9;
+        }
+    }
+    
 }
 
 
@@ -62,6 +93,8 @@ a{
 svg{
     cursor: pointer;
 }
+
+// definir los tamaños de las tags
 h2{
     font-size: variables.$fs-h2-text;
 }
@@ -72,7 +105,7 @@ h3{
 p{
     font-size: variables.$fs-text;
 }
-// definir los tamaños de las tags
+
 
 @media screen and (min-width:768px) {
         .content{
@@ -92,7 +125,6 @@ p{
 }
 
 
-
 @media screen and (min-width:1024px) {
         .content{
             width: 75%;
@@ -107,4 +139,11 @@ p{
         p{
             font-size: variables.$fg-text;
         }
+}
+
+@media screen and (min-width:1680px) {
+    .content{
+        width: 60%;
+    }
+    
 }

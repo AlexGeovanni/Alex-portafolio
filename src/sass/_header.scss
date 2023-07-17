@@ -1,7 +1,6 @@
 @use 'variables.scss';
 
 header{
-    background-color:variables.$bg-header-l;
     padding: 12px 0;
     position: fixed;
     width: 100%;
@@ -40,7 +39,7 @@ header{
             & li {
                 border-radius: 5px;
                 & > a{
-                    color: #000000;  
+                    color: #424647;  
                     display: block;
                     padding:6px 4px;
                     border-radius: 5px;
@@ -50,11 +49,17 @@ header{
                     &:hover{
                         // background-color: rgba(2, 92, 151, 0.3);
                         // background-color: rgba(1, 78, 129,.2);
-                        background-color: rgba(104, 185, 243, 0.3);
+                        background-color: rgba(104, 185, 243,.2);
                         color: #1083D6; 
                         transition: background-color .3s ease-in-out;
                     }
                     
+                }
+            }
+            &.dark{
+                background-color: variables.$bg-header-d;
+                & li > a{
+                    color: #e2e2e2; 
                 }
             }
         }

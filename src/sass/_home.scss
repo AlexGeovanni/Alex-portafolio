@@ -1,12 +1,14 @@
 @use 'variables.scss';
 
 .redes{
-    margin: 10px 0;
+    margin: 18px 0;
     padding: 0 5px;
     & a:first-child{
         margin-right: 5px;
     }
 }
+
+
 .home{
     padding-top: 60px;
     & .content__home{
@@ -28,7 +30,7 @@
                 font-weight: 900;
                 font-size:variables.$fs-h1-text ;
                 line-height: 40px;
-                color: #014E81;
+                color: #0475c0;
                 letter-spacing: -1px;
                 span {
                     font-size: 2.4rem;
@@ -36,10 +38,11 @@
                 }
             }
 
-            & > p{
-                font-size: 1.3rem;
+
+            & > h3{
+                font-size: 1.250rem;
                 margin: 10px 0;
-                color: variables.$color-title-l;
+                font-weight: 400;
             }
 
             .about-me__info{
@@ -75,16 +78,18 @@
             & .home__info{
                 padding-left: 25px;
                 h1{
-                    max-width: 15ch;
+                    max-width: 12ch;
                     font-size:variables.$fg-h1-text;
-                    line-height: 45px;
+                    line-height: 40px;
+                    letter-spacing: 0px;
                     span {
-                        font-size: 2.5rem;
+                        font-size: 2.2rem;
                     }
                 }
     
                 & > p{
-                    font-size: 1.4rem;
+                    margin: 18px 0;
+                    font-size: 1.3rem;
                 }
 
                 .about-me__info{
