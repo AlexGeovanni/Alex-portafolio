@@ -8,17 +8,15 @@
 .content__formations{
 
     & h2{
-        font-size: variables.$fs-h2-text;
         margin-bottom: 10px;
     }
 
     & .formation__info{
-        max-width: 380px;
         display: flex;
+        justify-content: center;
         align-items: center;
         gap: 0 20px;
         & .info__img {
-
             display: block;
             width: 150px;
             & img {
@@ -46,15 +44,21 @@
     @media screen and (min-width:768px) {
     
         & .formation__info{
-            display: flex;
+            max-width: 350px;
             flex-direction: column;
             gap: 15px 0;
+            & .info__img {
+                width: 200px;    
+            }
+
             & > div{
                 padding: 0 10px;
                 text-align: center;
-    
+                & h3{
+                    font-size: 1.4rem;
+                }
                 & p{
-                    line-height: 14px;
+                    line-height: 18px;
                     margin: 5px 0;
                 }
                 & span{

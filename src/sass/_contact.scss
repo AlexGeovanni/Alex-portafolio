@@ -1,7 +1,6 @@
 @use 'variables.scss';
 
 .contact{
-
     & .content__contact > div{
         display: flex;
         gap:0 10px ;
@@ -9,7 +8,7 @@
     }
     & .contact__info{
         width: 100%;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         & h3{
             margin-top: 15px;
             font-weight: 400;
@@ -28,6 +27,7 @@
             resize: none;
             padding: 16px 20px 6px 12px;
             font-size: 1.1rem;
+            font-weight: 400;
             border-radius: 5px;
             background-color: transparent;
             border: 2px solid #2a3b47;
@@ -42,7 +42,6 @@
             & .input__name,.input__email{
                 width: 100%;
                 position: relative;
-
                 & span{
                     position: absolute;
                     font-size: 1.1rem;
@@ -55,6 +54,7 @@
                 input:focus ~span{
                     top: -11px;
                     font-weight: 300;
+                    font-size: .9rem;
                     padding: 0 5px;
                     background-color: rgb(17 27 34);
                     transition: all .3s ease-in-out;
@@ -78,6 +78,7 @@
                 top: -11px;
                 font-weight: 300;
                 padding: 0 5px;
+                font-size: .9rem;
                 background-color: rgb(17 27 34);
                 transition: all .3s ease-in-out;
             }
@@ -105,61 +106,10 @@
         }
         & .contact__info{
             width: 80%;
-            margin-bottom: 50px;
             & h3{
                 font-size: 1.2rem;
             }
             
-        }
-    
-    
-        & form{
-            width: 100%;
-            input,textarea{
-                width: 100%;
-                resize: none;
-                padding: 16px 20px 6px 12px;
-                font-size: 1.1rem;
-                border-radius: 5px;
-                background-color: transparent;
-                border: 2px solid #2a3b47;
-                color: aliceblue;
-            }
-    
-            & .form__inputs{
-                flex-wrap: nowrap;
-                width: 100%;
-                gap: 0 8px;                    
-            }
-    
-            & .form__textarea{
-                margin-top: 20px;
-                position: relative;
-                & span{
-                    position: absolute;
-                    font-size: 1.1rem;
-                    top: 18px;
-                    left: 13px;
-                    pointer-events: none;
-                }  
-                & textarea:valid ~span,
-                & textarea:focus ~span{
-                    top: -11px;
-                    font-weight: 300;
-                    padding: 0 5px;
-                    background-color: rgb(17 27 34);
-                    transition: all .3s ease-in-out;
-                }
-                
-            }
-    
-            & button{
-                width: 100%;
-                padding: 12px 0;
-                cursor: pointer;
-                font-size: 1.2rem;
-                border-radius: 5px;
-            }
         }
     }
 }
