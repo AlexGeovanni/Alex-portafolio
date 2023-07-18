@@ -36,10 +36,7 @@ body{
 body.dark-mod{
     color:variables.$color-text-d;
     background:variables.$color-body-d;
-    & header {
-        background-color:variables.$bg-header-d;
-    }
-    
+        
     h2{
         color: variables.$color-title-d;
     }
@@ -47,6 +44,17 @@ body.dark-mod{
         color: variables.$color-title-d;
     }
 
+    //Header
+    & header {
+        background-color:variables.$bg-header-d;
+        & .menu_hambg{
+            & svg path{
+                stroke: #ffffff;
+            }
+        }
+    }
+
+    // redes de home y contacto
     & .redes{
         svg{
             fill:variables.$color-text-d;
@@ -56,6 +64,7 @@ body.dark-mod{
         }
     }
 
+    // Home
     .content__home{
         & .home__info{
             h1{

@@ -29,14 +29,17 @@ body.dark-mod {
   color: #C8CDD0;
   background: rgb(17, 27, 34);
 }
-body.dark-mod header {
-  background-color: #0d161c;
-}
 body.dark-mod h2 {
   color: #e8ebec;
 }
 body.dark-mod h3 {
   color: #e8ebec;
+}
+body.dark-mod header {
+  background-color: #0d161c;
+}
+body.dark-mod header .menu_hambg svg path {
+  stroke: #ffffff;
 }
 body.dark-mod .redes svg {
   fill: #C8CDD0;
@@ -161,9 +164,6 @@ header {
   align-items: center;
   gap: 10px;
 }
-.Hearder__nav .icon_title__nav .menu_hamburger path {
-  filter: invert(1);
-}
 .Hearder__nav .nav__items {
   position: fixed;
   width: 100%;
@@ -222,7 +222,7 @@ header {
   .Hearder__nav {
     width: 80%;
   }
-  .Hearder__nav .menu_hamburger {
+  .Hearder__nav .menu_hambg {
     display: none;
   }
   .Hearder__nav .nav__items {
@@ -367,7 +367,8 @@ header {
 .tech .content__tech div .tech__icon img {
   width: 55px;
   margin: auto;
-  object-fit: contain;
+  object-fit: cover;
+  cursor: pointer;
 }
 .tech .content__tech div .tech__icon span {
   text-align: center;
@@ -375,7 +376,7 @@ header {
 }
 @media screen and (min-width: 768px) {
   .tech .content__tech div {
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
   }
   .tech .content__tech p {
     max-width: 70ch;

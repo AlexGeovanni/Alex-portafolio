@@ -21,11 +21,6 @@ header{
         display: flex;
         align-items: center;
         gap: 10px;
-        & .menu_hamburger{
-            & path{
-                filter: invert(1);
-            }
-        }
     }
     
     & .nav__items{
@@ -92,7 +87,7 @@ header{
 
     @media screen and (min-width:768px) {
         width: 80%;
-        .menu_hamburger{
+        .menu_hambg{
             display: none;
         }
         & .nav__items{

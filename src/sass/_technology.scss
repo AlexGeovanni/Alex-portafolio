@@ -25,7 +25,8 @@
                 img{
                     width: 55px;
                     margin: auto;
-                    object-fit: contain;
+                    object-fit: cover;
+                    cursor: pointer;
                 }
                 span {
                     text-align: center;
@@ -39,7 +40,7 @@
     @media screen and (min-width:768px) {
         .content__tech{
             & div{
-                grid-template-columns: repeat(auto-fit, minmax(80px,1fr));
+                grid-template-columns: repeat(auto-fit, minmax(85px,1fr));
             }
             & p{
                 max-width: 70ch;
