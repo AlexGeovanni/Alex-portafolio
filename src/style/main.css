@@ -220,6 +220,10 @@ header {
   .Hearder__nav .nav__items ul li > a {
     padding: 8px 12px;
   }
+  .Hearder__nav .nav__items ul.dark-ul {
+    background-color: transparent;
+    border: none;
+  }
 }
 
 .redes {
