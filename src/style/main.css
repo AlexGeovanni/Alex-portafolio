@@ -38,15 +38,33 @@ body.dark-mod h2 {
 body.dark-mod h3 {
   color: #e8ebec;
 }
+body.dark-mod .redes svg {
+  fill: #C8CDD0;
+}
+body.dark-mod .redes svg:hover {
+  fill: #ffffff;
+}
 body.dark-mod .content__home .home__info h1 span {
   color: #e8ebec;
 }
 body.dark-mod .content__home > p.sub-title {
   color: #e8ebec;
 }
+body.dark-mod input, body.dark-mod textarea {
+  color: #e8ebec;
+}
+body.dark-mod .project__content .info__view a svg {
+  fill: #C8CDD0;
+}
+body.dark-mod .project__content .info__view a svg:hover {
+  fill: #ffffff;
+}
 body.dark-mod div.card {
   background-color: #212E36;
   border: 2px solid #2A3B47;
+}
+body.dark-mod .content__footer {
+  border-top: 1px solid #2A3B47;
 }
 
 li {
@@ -120,10 +138,15 @@ p {
   }
 }
 header {
-  padding: 12px 0;
+  padding: 18px 0;
   position: fixed;
   width: 100%;
   z-index: 100;
+}
+@media screen and (min-width: 768px) {
+  header {
+    padding: 14px 0;
+  }
 }
 
 .Hearder__nav {
@@ -211,6 +234,7 @@ header {
   .Hearder__nav .nav__items ul {
     width: auto;
     background-color: transparent;
+    border: none;
     border-radius: 0;
     padding: 0;
     display: flex;
@@ -227,11 +251,15 @@ header {
 }
 
 .redes {
-  margin: 18px 0;
-  padding: 0 5px;
+  margin: 22px 0;
 }
 .redes a:first-child {
-  margin-right: 5px;
+  margin-right: 15px;
+}
+.redes svg:hover {
+  fill: #000000;
+  transform: scale(1.07);
+  transition: all 0.3s ease-in-out;
 }
 
 .home {
@@ -294,9 +322,9 @@ header {
     padding-left: 25px;
   }
   .home .content__home .home__info h1 {
-    max-width: 12ch;
+    max-width: 15ch;
     font-size: 3rem;
-    line-height: 40px;
+    line-height: 42px;
     letter-spacing: 0px;
   }
   .home .content__home .home__info h1 span {
@@ -361,6 +389,11 @@ header {
   display: flex;
   flex-flow: row wrap;
   gap: 15px 0;
+}
+.project__content .info__view a svg:hover {
+  fill: #000000;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
 }
 @media screen and (min-width: 768px) {
   .project__content .cards {
@@ -428,10 +461,6 @@ header {
 .card .card__info .info__view a {
   display: flex;
   align-items: center;
-}
-.card .card__info .info__view a svg:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease-in-out;
 }
 @media screen and (min-width: 768px) {
   .card {
@@ -538,7 +567,6 @@ header {
   border-radius: 5px;
   background-color: transparent;
   border: 2px solid #2a3b47;
-  color: aliceblue;
 }
 .contact form .form__inputs {
   display: flex;
@@ -564,8 +592,13 @@ header {
   font-weight: 300;
   font-size: 0.9rem;
   padding: 0 5px;
-  background-color: rgb(17, 27, 34);
+  background-color: #FBFBFE;
   transition: all 0.3s ease-in-out;
+}
+.contact form .form__inputs .input__name input:valid ~ span.dark-span,
+.contact form .form__inputs .input__name input:focus ~ span.dark-span, .contact form .form__inputs .input__email input:valid ~ span.dark-span,
+.contact form .form__inputs .input__email input:focus ~ span.dark-span {
+  background-color: rgb(17, 27, 34);
 }
 .contact form .form__textarea {
   margin-top: 20px;
@@ -583,8 +616,11 @@ header {
   font-weight: 300;
   padding: 0 5px;
   font-size: 0.9rem;
-  background-color: rgb(17, 27, 34);
+  background-color: #FBFBFE;
   transition: all 0.3s ease-in-out;
+}
+.contact form .form__textarea textarea:valid ~ span.dark-span, .contact form .form__textarea textarea:focus ~ span.dark-span {
+  background-color: rgb(17, 27, 34);
 }
 .contact form button {
   width: 100%;
@@ -615,6 +651,9 @@ footer {
   padding: 20px 0 25px 0;
 }
 
+.content__footer {
+  border-top: 1px solid #EDEFF0;
+}
 .content__footer p {
   text-align: center;
 }

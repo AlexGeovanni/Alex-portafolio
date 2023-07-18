@@ -31,7 +31,6 @@
             border-radius: 5px;
             background-color: transparent;
             border: 2px solid #2a3b47;
-            color: aliceblue;
         }
 
         & .form__inputs{
@@ -56,8 +55,12 @@
                     font-weight: 300;
                     font-size: .9rem;
                     padding: 0 5px;
-                    background-color: rgb(17 27 34);
+                    // background-color: rgb(17 27 34);
+                    background-color: variables.$color-body-l;
                     transition: all .3s ease-in-out;
+                    &.dark-span{
+                        background-color: variables.$color-body-d;
+                    }
                 }
             }
                 
@@ -79,8 +82,11 @@
                 font-weight: 300;
                 padding: 0 5px;
                 font-size: .9rem;
-                background-color: rgb(17 27 34);
+                background-color: variables.$color-body-l;
                 transition: all .3s ease-in-out;
+                &.dark-span{
+                    background-color: variables.$color-body-d;
+                }
             }
             
         }

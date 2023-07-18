@@ -5,6 +5,7 @@ footer{
 }
 
 .content__footer{
+    border-top:1px solid variables.$color-border-l;
     & p{
         text-align: center;
     }

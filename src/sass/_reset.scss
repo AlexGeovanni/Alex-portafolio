@@ -47,6 +47,15 @@ body.dark-mod{
         color: variables.$color-title-d;
     }
 
+    & .redes{
+        svg{
+            fill:variables.$color-text-d;
+        }
+        svg:hover{
+            fill: #ffffff;
+        }
+    }
+
     .content__home{
         & .home__info{
             h1{
@@ -60,17 +69,33 @@ body.dark-mod{
         }
     }
 
-    .redes{
-        & svg{
-            // fill:#afa9a9;
-        }
+    // Contacto
+    input,textarea{
+        color: variables.$color-title-d;
     }
 
+    // Proyectos
+    .project__content{
+        & .info__view{
+            & a svg{
+                fill:variables.$color-text-d;
+            }
+            & a svg:hover{
+                fill: #ffffff;
+            }
+        }
+    
+    }
     & div.card{
         background-color: variables.$color-box-d;
         border: 2px solid variables.$color-border-d;
     } 
     
+
+    // Footer
+    & .content__footer{
+        border-top:1px solid variables.$color-border-d;
+    }
 }
 
 

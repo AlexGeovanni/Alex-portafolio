@@ -10,6 +10,15 @@
         flex-flow: row wrap;
         gap: 15px 0;
     }
+    & .info__view{
+        & a svg:hover{
+            fill: #000000;
+            transform: scale(1.05);
+            transition: all .3s ease-in-out;
+        }
+    }
+
+
     @media screen and (min-width:768px) {
         .cards{
 
@@ -85,11 +94,6 @@
             & a{
                 display: flex;
                 align-items: center;
-
-                svg:hover{
-                    transform: scale(1.1);
-                    transition: transform .3s ease-in-out;
-                }
             }
         }
     }
