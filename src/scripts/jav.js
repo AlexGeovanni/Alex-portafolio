@@ -1,4 +1,5 @@
-
+// Logo click
+document.querySelector('#Logo_dev').addEventListener('click',()=>location.reload())
 
 
 // para abir el menu de navegacion en dispositivo movil

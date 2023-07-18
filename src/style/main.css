@@ -164,6 +164,10 @@ header {
   align-items: center;
   gap: 10px;
 }
+.Hearder__nav .icon_title__nav h1 {
+  cursor: pointer;
+  color: #0475c0;
+}
 .Hearder__nav .nav__items {
   position: fixed;
   width: 100%;
@@ -306,6 +310,10 @@ header {
   padding: 13px 10px;
   background-color: #0a6cad;
   border-radius: 5px;
+}
+.home .content__home .home__info .download:hover {
+  background-color: #2286ce;
+  transition: background-color 0.3s ease-in-out;
 }
 @media screen and (min-width: 768px) {
   .home .content__home {
@@ -633,6 +641,10 @@ header {
   border-radius: 5px;
   border: none;
   background-color: #0a6cad;
+}
+.contact form button:hover {
+  background-color: #2286ce;
+  transition: background-color 0.3s ease-in-out;
 }
 @media screen and (min-width: 768px) {
   .contact .content__contact > div {

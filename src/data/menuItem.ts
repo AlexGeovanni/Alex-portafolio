@@ -146,7 +146,11 @@ export const Icons =[
     {
         nameImg:"php_img.png",
         title:"Php"
-    },,
+    },
+    {
+        nameImg:"bootstrap_img.png",
+        title:"Bootstrap"
+    },
     {
         nameImg:"vercel_img.png",
         title:"Vercel"
@@ -154,5 +158,5 @@ export const Icons =[
     {
         nameImg:"astro_img.png",
         title:"Astro"
-    }
+    },
 ]

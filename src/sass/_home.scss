@@ -64,6 +64,10 @@
                 padding: 13px 10px;
                 background-color:variables.$btn_bg;
                 border-radius: 5px;
+                &:hover{
+                    background-color:variables.$btn_bg_hover;
+                    transition:background-color .3s ease-in-out ;
+                }
             }
         }
     }

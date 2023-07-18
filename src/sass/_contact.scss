@@ -101,6 +101,10 @@
             border-radius: 5px;
             border: none;
             background-color: variables.$btn_bg;
+            &:hover{
+                background-color:variables.$btn_bg_hover;
+                transition:background-color .3s ease-in-out ;
+            }
         }
     }
 

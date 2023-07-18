@@ -21,6 +21,10 @@ header{
         display: flex;
         align-items: center;
         gap: 10px;
+        & h1{
+            cursor: pointer;
+            color: #0475c0;
+        }
     }
     
     & .nav__items{
