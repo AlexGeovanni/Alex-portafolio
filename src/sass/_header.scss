@@ -18,6 +18,11 @@ header{
         display: flex;
         align-items: center;
         gap: 10px;
+        & .menu_hamburger{
+            & path{
+                filter: invert(1);
+            }
+        }
     }
     
     & .nav__items{
@@ -33,6 +38,9 @@ header{
             width: 90%;
             padding: 8px 12px;
             margin: auto;
+            border-left: 2px solid variables.$color-border-l;
+            border-right: 2px solid variables.$color-border-l;
+            border-bottom: 2px solid variables.$color-border-l;
             background-color: variables.$bg-header-l;
             box-shadow: 1px 12px 15px -16px variables.$color-body-d;
             border-radius:5px;
@@ -56,8 +64,11 @@ header{
                     
                 }
             }
-            &.dark{
+            &.dark-ul{
                 background-color: variables.$bg-header-d;
+                border-left: 2px solid variables.$color-border-d;
+                border-right: 2px solid variables.$color-border-d;
+                border-bottom: 2px solid variables.$color-border-d;
                 & li > a{
                     color: #e2e2e2; 
                 }
@@ -70,6 +81,9 @@ header{
         transform: translateY(0px);
         transition: opacity .1s ease-in-out;
         transition: transform .3s ease-in-out;
+    }
+    & #light{
+        display: none;
     }
 
 

@@ -65,6 +65,11 @@ body.dark-mod{
             // fill:#afa9a9;
         }
     }
+
+    & div.card{
+        background-color: variables.$color-box-d;
+        border: 2px solid variables.$color-border-d;
+    } 
     
 }
 

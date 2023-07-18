@@ -25,10 +25,6 @@
 
 // las cards
 .card {
-    &.card-dark{
-        background-color: variables.$color-box-d;
-    border: 2px solid variables.$color-border-d;
-    } 
     position: relative;
     padding: 15px;
     background-color: variables.$color-box-l;

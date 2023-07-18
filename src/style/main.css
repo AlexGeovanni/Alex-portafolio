@@ -44,6 +44,11 @@ body.dark-mod .content__home .home__info h1 span {
 body.dark-mod .content__home > p.sub-title {
   color: #e8ebec;
 }
+body.dark-mod div.card {
+  background-color: #212E36;
+  border: 2px solid #2A3B47;
+}
+
 li {
   list-style: none;
 }
@@ -133,6 +138,9 @@ header {
   align-items: center;
   gap: 10px;
 }
+.Hearder__nav .icon_title__nav .menu_hamburger path {
+  filter: invert(1);
+}
 .Hearder__nav .nav__items {
   position: fixed;
   width: 100%;
@@ -147,6 +155,9 @@ header {
   width: 90%;
   padding: 8px 12px;
   margin: auto;
+  border-left: 2px solid #EDEFF0;
+  border-right: 2px solid #EDEFF0;
+  border-bottom: 2px solid #EDEFF0;
   background-color: rgb(255, 255, 255);
   box-shadow: 1px 12px 15px -16px rgb(17, 27, 34);
   border-radius: 5px;
@@ -166,10 +177,13 @@ header {
   color: #1083D6;
   transition: background-color 0.3s ease-in-out;
 }
-.Hearder__nav .nav__items ul.dark {
+.Hearder__nav .nav__items ul.dark-ul {
   background-color: #0d161c;
+  border-left: 2px solid #2A3B47;
+  border-right: 2px solid #2A3B47;
+  border-bottom: 2px solid #2A3B47;
 }
-.Hearder__nav .nav__items ul.dark li > a {
+.Hearder__nav .nav__items ul.dark-ul li > a {
   color: #e2e2e2;
 }
 .Hearder__nav .show {
@@ -177,6 +191,9 @@ header {
   transform: translateY(0px);
   transition: opacity 0.1s ease-in-out;
   transition: transform 0.3s ease-in-out;
+}
+.Hearder__nav #light {
+  display: none;
 }
 @media screen and (min-width: 768px) {
   .Hearder__nav {
@@ -352,10 +369,6 @@ header {
   background-color: #fdfdfd;
   border: 2px solid #EDEFF0;
   border-radius: 5px;
-}
-.card.card-dark {
-  background-color: #212E36;
-  border: 2px solid #2A3B47;
 }
 .card::after {
   position: absolute;
