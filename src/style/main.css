@@ -101,7 +101,7 @@ h3 {
 }
 
 p {
-  font-size: 0.95rem;
+  font-size: 0.98rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -115,7 +115,7 @@ p {
     font-size: 1.3rem;
   }
   p {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -167,7 +167,7 @@ header {
 .Hearder__nav .nav__items {
   position: fixed;
   width: 100%;
-  top: 56px;
+  top: 65px;
   right: 0;
   opacity: 0;
   transform: translateY(-400px);
