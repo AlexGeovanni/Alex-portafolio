@@ -1,10 +1,11 @@
 @use 'variables.scss';
 
 footer{
-    padding: 20px 0 25px 0;
+    margin-top: 50px;
 }
 
 .content__footer{
+    padding: 20px 0 25px 0;
     border-top:1px solid variables.$color-border-l;
     & p{
         text-align: center;

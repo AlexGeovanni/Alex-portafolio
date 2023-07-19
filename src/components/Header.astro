@@ -1,7 +1,6 @@
 ---
 import {Menu} from '.././data/menuItem'
 
-let isShow=false
 ---
     <header>
         <nav class="content Hearder__nav">
@@ -21,7 +20,7 @@ let isShow=false
             <div id="nav-items" class="nav__items">
                 <ul>
                 {
-                    Menu.map((item)=><li><a href={`#${item.title.toLowerCase()}`}rel="noopener noreferrer">{item.title}</a></li>)
+                    Menu.map((item)=><li><a href={`#${item.title.toLowerCase()}`} rel="noopener noreferrer">{item.title}</a></li>)
                 }
                 </ul>
             </div>

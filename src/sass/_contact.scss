@@ -1,6 +1,7 @@
 @use 'variables.scss';
 
 .contact{
+    margin-top: 60px;
     & .content__contact > div{
         display: flex;
         gap:0 10px ;

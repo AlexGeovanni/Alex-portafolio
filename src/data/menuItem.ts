@@ -41,16 +41,24 @@ export const Projects:Array<ProjectItem> = [
     {
         nameImg:"peliculaApi",
         title:"Películas",
-        content:"Página web para buscar y ver los detalles de películas más recientes, con la API de TheMoviDB, responsivo,construida:",
+        content:"Página web para buscar y ver los detalles de películas más recientes, con la API de TheMoviDB, responsivo, construida con :",
         tecnologias:["React","Html5","Css3","JavaScript"],
         repos:"https://github.com/AlexGeovanni/Pagina_peli_react",
         deploy:"https://pagina-peli-react.vercel.app/"
 
     },
     {
+        nameImg:"api_rest",
+        title:"Api REST",
+        content:"CRUD más información en el repositorio, actualmente, el servicio donde se alojó ha caducado, construida con :",
+        tecnologias:["JavaScript","nodejs","Express","MySQL"],
+        repos:"https://github.com/AlexGeovanni/API_REST_DESEMPLEO",
+        deploy:""
+    },
+    {
         nameImg:"aluraflix",
         title:"AluraFlix",
-        content:"Sitio web para ver videos respecto a Alura, responsivo, construida con:",
+        content:"Sitio web para ver videos respecto a Alura, responsivo, construida con :",
         tecnologias:["React","Html5","Css3","JavaScript"],
         repos:"https://github.com/AlexGeovanni/Aluraflixx",
         deploy:"https://aluraflixx.vercel.app/"
@@ -61,14 +69,14 @@ export const Projects:Array<ProjectItem> = [
     //     content:"Sitio web para ver videos respecto a Alura, responsivo y fue construida con las siguientes tecnologías :",
     //     tecnologias:["React","Html5","Css3","JavaScript","TypeScript"],
     // },
-    {
-        nameImg:"descriptador",
-        title:"Descriptador",
-        content:"Encriptar y desencriptar texto, responsivo,construida con :",
-        tecnologias:["Html5","Css3","JavaScript"],
-        repos:"https://github.com/AlexGeovanni/Descriptador",
-        deploy:"https://alexgeovanni.github.io/Descriptador/"
-    },
+    // {
+    //     nameImg:"descriptador",
+    //     title:"Descriptador",
+    //     content:"Encriptar y desencriptar texto, responsivo, construida con :",
+    //     tecnologias:["Html5","Css3","JavaScript"],
+    //     repos:"https://github.com/AlexGeovanni/Descriptador",
+    //     deploy:"https://alexgeovanni.github.io/Descriptador/"
+    // },
     // {
     //     nameImg:"org_team",
     //     title:"Organización",

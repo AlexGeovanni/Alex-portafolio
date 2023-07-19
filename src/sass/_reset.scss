@@ -4,7 +4,7 @@
 :root{
     --Letra:'Lato', sans-serif;
     scroll-behavior: smooth;
-    scroll-padding:75px;
+    scroll-padding:60px;
 }
 *{
     margin: 0;
@@ -98,6 +98,11 @@ body.dark-mod{
     & div.card{
         background-color: variables.$color-box-d;
         border: 2px solid variables.$color-border-d;
+        .card__info{
+            & p{
+                color: variables.$color-text-project-d;
+            }
+        }
     } 
     
 
@@ -183,6 +188,7 @@ p{
 @media screen and (min-width:1680px) {
     .content{
         width: 60%;
+        
     }
     
 }

@@ -29,7 +29,7 @@ const { item }:Itemss= Astro.props;
                 </svg>
             </a>
 
-            <a href={item.deploy} target="_blank" rel="noopener noreferrer">
+            {item.deploy && <a href={item.deploy} target="_blank" rel="noopener noreferrer">
                 <?xml version="1.0" encoding="utf-8"?>
                 <svg fill="#333333"  xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 33 32" >
                 	<path d="M0.004,10.895c0.001,0.722,0.446,1.325,1.135,1.539l12.019,3.724c0.192,0.06,0.329,0.229,0.349,0.43
@@ -41,7 +41,7 @@ const { item }:Itemss= Astro.props;
                 		l29.768-9.281c0.024-0.008,0.048-0.007,0.072-0.011L13.781,15.359c-0.103-0.062-0.209-0.121-0.327-0.157L1.436,11.479
                 		C1.036,11.354,1.004,11,1.004,10.894C1.004,10.676,1.117,10.407,1.434,10.309z"/>
                 </svg>
-            </a>
+            </a>}
         </div>
     </div>
 </div>

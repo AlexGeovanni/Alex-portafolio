@@ -1,7 +1,7 @@
 :root {
   --Letra:"Lato", sans-serif;
   scroll-behavior: smooth;
-  scroll-padding: 75px;
+  scroll-padding: 60px;
 }
 
 * {
@@ -65,6 +65,9 @@ body.dark-mod .project__content .info__view a svg:hover {
 body.dark-mod div.card {
   background-color: #212E36;
   border: 2px solid #2A3B47;
+}
+body.dark-mod div.card .card__info p {
+  color: #d9dee0;
 }
 body.dark-mod .content__footer {
   border-top: 1px solid #2A3B47;
@@ -198,6 +201,21 @@ header {
   padding: 6px 4px;
   border-radius: 5px;
   font-weight: 400;
+  position: relative;
+}
+.Hearder__nav .nav__items ul li > a::before {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #1083D6;
+  border-radius: 5px;
+}
+.Hearder__nav .nav__items ul li > a:active:before {
+  width: 100%;
 }
 .Hearder__nav .nav__items ul li > a:hover {
   background-color: rgba(104, 185, 243, 0.2);
@@ -256,6 +274,8 @@ header {
 
 .redes {
   margin: 22px 0;
+  display: flex;
+  align-items: center;
 }
 .redes a:first-child {
   margin-right: 15px;
@@ -297,6 +317,9 @@ header {
   font-size: 1.25rem;
   margin: 10px 0;
   font-weight: 400;
+}
+.home .content__home .home__info .about-me__info {
+  margin-top: 20px;
 }
 .home .content__home .home__info .about-me__info p {
   line-height: 20px;
@@ -342,6 +365,9 @@ header {
     margin: 18px 0;
     font-size: 1.3rem;
   }
+  .home .content__home .home__info .about-me__info {
+    margin-top: 40px;
+  }
   .home .content__home .home__info .about-me__info p {
     line-height: 22px;
   }
@@ -351,7 +377,7 @@ header {
 }
 
 .tech {
-  padding: 20px 0;
+  margin-top: 60px;
 }
 .tech .content__tech h2 {
   margin-bottom: 12px;
@@ -391,21 +417,24 @@ header {
   }
 }
 
-.project__content h2 {
+.project {
+  margin-top: 60px;
+}
+.project .project__content h2 {
   margin-bottom: 22px;
 }
-.project__content .cards {
+.project .project__content .cards {
   display: flex;
   flex-flow: row wrap;
-  gap: 15px 0;
+  gap: 30px 20px;
 }
-.project__content .info__view a svg:hover {
+.project .project__content .info__view a svg:hover {
   fill: #000000;
   transform: scale(1.05);
   transition: all 0.3s ease-in-out;
 }
 @media screen and (min-width: 768px) {
-  .project__content .cards {
+  .project .project__content .cards {
     flex-flow: row wrap;
     justify-content: space-between;
   }
@@ -413,7 +442,7 @@ header {
 
 .card {
   position: relative;
-  padding: 15px;
+  padding: 25px;
   background-color: #fdfdfd;
   border: 2px solid #EDEFF0;
   border-radius: 5px;
@@ -421,7 +450,7 @@ header {
 .card::after {
   position: absolute;
   content: "";
-  top: -6px;
+  top: -5px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -441,21 +470,24 @@ header {
   height: 100%;
   object-fit: contain;
 }
+.card .card__info {
+  margin-top: 10px;
+}
 .card .card__info h3 {
   font-size: 1.25rem;
-  margin: 8px 0;
 }
 .card .card__info > p {
   max-width: 50ch;
   font-size: 0.8rem;
   line-height: 16px;
-  margin: 4px 0;
+  margin: 8px 0;
+  color: #43494b;
 }
 .card .card__info .info__tech {
   display: flex;
   flex-wrap: wrap;
   gap: 5px 10px;
-  margin: 10px 0;
+  margin: 8px 0;
 }
 .card .card__info .info__tech span {
   font-size: 0.825rem;
@@ -474,7 +506,7 @@ header {
 @media screen and (min-width: 768px) {
   .card {
     min-width: 280px;
-    max-width: calc(50% - 18px);
+    max-width: calc(50% - 15px);
   }
   .card .card__img {
     overflow: hidden;
@@ -491,7 +523,7 @@ header {
 }
 
 .formations {
-  padding: 20px 0;
+  margin-top: 60px;
 }
 
 .content__formations h2 {
@@ -547,6 +579,9 @@ header {
   }
 }
 
+.contact {
+  margin-top: 60px;
+}
 .contact .content__contact > div {
   display: flex;
   gap: 0 10px;
@@ -661,10 +696,11 @@ header {
 }
 
 footer {
-  padding: 20px 0 25px 0;
+  margin-top: 50px;
 }
 
 .content__footer {
+  padding: 20px 0 25px 0;
   border-top: 1px solid #EDEFF0;
 }
 .content__footer p {
