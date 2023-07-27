@@ -60,6 +60,13 @@
                 & > p:first-of-type{
                     margin-bottom: 10px;
                 }
+                & p a{
+                    color: #098ce2;
+                    &:hover{
+                        color: rgb(3, 78, 128);
+                        transition: color .3s ease-in-out;
+                    }
+                }
             }
 
             .download{
@@ -89,12 +96,13 @@
             & .home__info{
                 padding-left: 25px;
                 h1{
-                    max-width: 15ch;
+                    max-width: 12ch;
                     font-size:variables.$fg-h1-text;
-                    line-height: 42px;
+                    line-height: 38px;
                     letter-spacing: 0px;
+                    margin-bottom: 16px;
                     span {
-                        font-size: 2.2rem;
+                        font-size: 1.8rem;
                     }
                 }
     

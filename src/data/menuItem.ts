@@ -50,7 +50,7 @@ export const Projects:Array<ProjectItem> = [
     {
         nameImg:"api_rest",
         title:"Api REST",
-        content:"CRUD más información en el repositorio, actualmente, el servicio donde se alojó ha caducado, construida con :",
+        content:"CRUD más información en el repositorio, actualmente el servicio donde se alojó ha caducado, construida con :",
         tecnologias:["JavaScript","nodejs","Express","MySQL"],
         repos:"https://github.com/AlexGeovanni/API_REST_DESEMPLEO",
         deploy:""
