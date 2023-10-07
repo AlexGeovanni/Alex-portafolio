@@ -85,6 +85,12 @@ body.dark-mod{
 
     // Proyectos
     .project__content{
+        & .title__project{
+            & a svg{
+                fill:variables.$color-text-d;
+            }
+        }
+        
         & .info__view{
             & a svg{
                 fill:variables.$color-text-d;
@@ -95,6 +101,8 @@ body.dark-mod{
         }
     
     }
+
+
     & div.card{
         background-color: variables.$color-box-d;
         border: 2px solid variables.$color-border-d;

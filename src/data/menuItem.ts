@@ -39,12 +39,12 @@ export const Menu:Array<MenuItem> = [
 
 export const Projects:Array<ProjectItem> = [
     {
-        nameImg:"peliculaApi",
-        title:"Películas",
-        content:"Página web para buscar y ver los detalles de películas más recientes, con la API de TheMoviDB, responsivo, construida con :",
-        tecnologias:["React","Html5","Css3","JavaScript"],
-        repos:"https://github.com/AlexGeovanni/Pagina_peli_react",
-        deploy:"https://pagina-peli-react.vercel.app/"
+        nameImg:"ecommerce",
+        title:"E-commerce",
+        content:"Página web simulación de un tienda en linea, donde puedes registrarte e iniciar sessión, muestra todos los productos filtrar los dato y carrito de compras :",
+        tecnologias:["React","Html5","Sass","Bootstrap","JavaScript"],
+        repos:"https://github.com/AlexGeovanni/App-ecoomercer-react",
+        deploy:"https://app-ecoomercer-react.vercel.app/"
 
     },
     {
@@ -150,10 +150,6 @@ export const Icons =[
     {
         nameImg:"nodejs_img.png",
         title:"NodeJs"
-    },
-    {
-        nameImg:"php_img.png",
-        title:"Php"
     },
     {
         nameImg:"bootstrap_img.png",
