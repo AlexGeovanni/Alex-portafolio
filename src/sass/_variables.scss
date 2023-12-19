@@ -24,7 +24,8 @@ $title:#eFF3F5;
 
 // modo oscuro
 
-$bg-header-d:#0d161c;
+// $bg-header-d:#0d161c;
+$bg-header-d:transparent;
 $color-body-d:rgba(17, 27, 34);// #111B22
 $color-title-d:#e8ebec;
 $color-text-d:#C8CDD0;
@@ -38,7 +39,8 @@ $color-box-d:#212E36;
 // modo light
 
 //$bg-header-l:rgba(235, 232, 232, 0.8);
-$bg-header-l:rgb(255, 255, 255);
+// $bg-header-l:rgb(255, 255, 255);
+$bg-header-l:transparent;
 
 $color-body-l:#FBFBFE;// #111B22
 $color-title-l:#023a5c;

@@ -16,7 +16,7 @@ body {
   background: #FBFBFE;
 }
 body header {
-  background-color: rgb(255, 255, 255);
+  background-color: transparent;
 }
 body h2 {
   color: #023a5c;
@@ -36,7 +36,7 @@ body.dark-mod h3 {
   color: #e8ebec;
 }
 body.dark-mod header {
-  background-color: #0d161c;
+  background-color: transparent;
 }
 body.dark-mod header .menu_hambg svg path {
   stroke: #ffffff;
@@ -149,12 +149,13 @@ p {
 header {
   padding: 18px 0;
   position: fixed;
+  backdrop-filter: blur(10px);
   width: 100%;
   z-index: 100;
 }
 @media screen and (min-width: 768px) {
   header {
-    padding: 14px 0;
+    padding: 22px 0;
   }
 }
 
@@ -191,7 +192,7 @@ header {
   border-left: 2px solid #EDEFF0;
   border-right: 2px solid #EDEFF0;
   border-bottom: 2px solid #EDEFF0;
-  background-color: rgb(255, 255, 255);
+  background-color: transparent;
   box-shadow: 1px 12px 15px -16px rgb(17, 27, 34);
   border-radius: 5px;
 }
@@ -226,7 +227,7 @@ header {
   transition: background-color 0.3s ease-in-out;
 }
 .Hearder__nav .nav__items ul.dark-ul {
-  background-color: #0d161c;
+  background-color: transparent;
   border-left: 2px solid #2A3B47;
   border-right: 2px solid #2A3B47;
   border-bottom: 2px solid #2A3B47;
@@ -298,11 +299,18 @@ header {
 .home .content__home .content_profile {
   display: block;
   max-width: 320px;
-  width: 220px;
+  width: 290px;
+  height: 290px;
   margin: 0 auto;
+  background-color: rgba(104, 185, 243, 0.2);
+  border-radius: 24% 76% 50% 50%/35% 37% 63% 65%;
+  overflow: hidden;
 }
 .home .content__home .content_profile > img {
+  border-radius: 50%;
   width: 100%;
+  height: 100%;
+  padding-top: 30px;
   object-fit: contain;
 }
 .home .content__home .home__info h1 {

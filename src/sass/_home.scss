@@ -22,10 +22,18 @@
         & .content_profile{
             display: block;
             max-width: 320px;
-            width: 220px;
+            width: 290px;
+            height: 290px;
             margin:  0 auto;
+            background-color:rgba(104, 185, 243,.2);
+            // border-radius: 50% 50% 50% 50% / 50% 50% 50% 50% ;
+            border-radius: 24% 76% 50% 50% / 35% 37% 63% 65% ;
+            overflow: hidden;
             & > img{
+                border-radius: 50%;
                 width: 100%;
+                height: 100%;
+                padding-top: 30px;
                 object-fit: contain;
             }
         }
