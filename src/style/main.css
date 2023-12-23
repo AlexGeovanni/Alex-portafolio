@@ -149,9 +149,19 @@ p {
 header {
   padding: 18px 0;
   position: fixed;
-  backdrop-filter: blur(10px);
   width: 100%;
   z-index: 100;
+}
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  z-index: -1;
 }
 @media screen and (min-width: 768px) {
   header {
@@ -177,8 +187,9 @@ header {
 }
 .Hearder__nav .nav__items {
   position: fixed;
+  background-color: transparent;
   width: 100%;
-  top: 65px;
+  top: 64px;
   right: 0;
   opacity: 0;
   transform: translateY(-400px);
@@ -192,9 +203,9 @@ header {
   border-left: 2px solid #EDEFF0;
   border-right: 2px solid #EDEFF0;
   border-bottom: 2px solid #EDEFF0;
-  background-color: transparent;
-  box-shadow: 1px 12px 15px -16px rgb(17, 27, 34);
+  background: transparent;
   border-radius: 5px;
+  backdrop-filter: blur(9px);
 }
 .Hearder__nav .nav__items ul li {
   border-radius: 5px;
@@ -456,6 +467,8 @@ header {
   display: flex;
   flex-flow: row wrap;
   gap: 30px 20px;
+  overflow: hidden;
+  padding-top: 7px;
 }
 .project .project__content .info__view a svg:hover {
   fill: #000000;
@@ -469,14 +482,11 @@ header {
   }
 }
 
-.card {
+.element_card {
   position: relative;
-  padding: 25px;
-  background-color: #fdfdfd;
-  border: 2px solid #EDEFF0;
-  border-radius: 5px;
 }
-.card::after {
+.element_card::after {
+  opacity: 0;
   position: absolute;
   content: "";
   top: -5px;
@@ -486,6 +496,25 @@ header {
   border-radius: 10px;
   background-color: #1083D6;
   z-index: -10;
+  transition: 0.2s ease-in-out 0.1s;
+}
+.element_card.after::after {
+  opacity: 1;
+  transition: 0.2s ease-in-out 0.5s;
+}
+@media screen and (min-width: 768px) {
+  .element_card {
+    min-width: 280px;
+    max-width: calc(50% - 15px);
+  }
+}
+
+.card {
+  position: relative;
+  padding: 25px;
+  background-color: #fdfdfd;
+  border: 2px solid #EDEFF0;
+  border-radius: 5px;
 }
 .card .card__img {
   display: block;
@@ -534,8 +563,8 @@ header {
 }
 @media screen and (min-width: 768px) {
   .card {
-    min-width: 280px;
-    max-width: calc(50% - 15px);
+    width: 100%;
+    height: 100%;
   }
   .card .card__img {
     overflow: hidden;
@@ -617,6 +646,7 @@ header {
   display: flex;
   gap: 0 10px;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 .contact .contact__info {
   width: 100%;
@@ -736,6 +766,60 @@ footer {
 }
 .content__footer p {
   text-align: center;
+}
+
+[data-animatio=show-pic] {
+  opacity: 0;
+  transition: 0.4s ease-in-out 0.1s;
+  --opacity: 1;
+}
+
+[data-animatio=show-img] {
+  opacity: 0;
+  transition: 0.4s ease-in-out 0.3s;
+  --opacity: 1;
+}
+
+[data-animatio=fade-tit] {
+  opacity: 0;
+  transform: translateX(-150px);
+  transition: 0.3s ease-in-out 0.4s;
+  --opacity: 1;
+  --transform:translate(0);
+}
+@media screen and (min-width: 768px) {
+  [data-animatio=fade-tit] {
+    transform: translateY(-150px);
+  }
+}
+
+[data-animate=fade-down] {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: 0.3s ease-in-out 0.1s;
+  --opacity: 1;
+  --transform:translateY(0);
+}
+
+[data-animate=fade-right] {
+  opacity: 0;
+  transform: translateX(-380px);
+  transition: 0.4s ease-in-out 0.2s;
+  --opacity: 1;
+  --transform:translateX(0);
+}
+
+[data-animate=fade-left] {
+  opacity: 0;
+  transform: translateX(380px);
+  transition: 0.4s ease-in-out 0.2s;
+  --opacity: 1;
+  --transform:translateX(0);
+}
+
+.unset {
+  opacity: var(--opacity);
+  transform: var(--transform);
 }
 
 /*# sourceMappingURL=main.css.map */

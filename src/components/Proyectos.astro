@@ -10,9 +10,9 @@ import Card from './cards/cards_proyect.astro';
 
 <section id="proyectos" class="project">
     <div class="content project__content">
-        <div class="title__project">
+        <div id="title_project"  class="title__project">
             <h2>Proyectos</h2>
-            <p>Para ver mas de mis proyectos revisa mi  
+            <p data-animate="fade-down">Para ver mas de mis proyectos revisa mi  
                 <a href="https://github.com/AlexGeovanni" target="_blank" rel="noopener noreferrer">
                     <?xml version="1.0" encoding="utf-8"?>
                     <svg data-svg fill="#333333" width="35px" height="35px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -24,9 +24,31 @@ import Card from './cards/cards_proyect.astro';
         <div class="cards">
             
             {
-                Projects.map((item)=> <Card item={item}/>)
+                Projects.map((item,i)=> <Card item={item} count={i} />)
 
             }
         </div>
     </div>
 </section>
+
+<script>
+    function triggerFuction(entries, observer){
+        entries.forEach(entry => {
+           const p = entry.target.querySelector('p');
+           p.classList.toggle('unset', entry.isIntersecting);
+        });
+    }
+
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+    }
+
+    const projectObserver = new IntersectionObserver(triggerFuction, options);
+
+    const titleProject = document.querySelector('#title_project');
+
+    projectObserver.observe(titleProject);
+
+</script>

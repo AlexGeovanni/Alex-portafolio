@@ -1,0 +1,59 @@
+
+[data-animatio="show-pic"] {
+  opacity: 0;
+  transition:  0.4s ease-in-out .1s ;
+  --opacity: 1;
+}
+ 
+[data-animatio="show-img"] {
+    opacity: 0;
+    transition: .4s ease-in-out .3s;
+    --opacity: 1;
+  }
+
+[data-animatio="fade-tit"] {
+    opacity: 0;
+    transform: translateX(-150px);
+    transition: .3s ease-in-out .4s;
+    
+    @media screen and (min-width:768px){
+      transform: translateY(-150px);
+    }
+    --opacity: 1;
+    --transform:translate(0);
+  }
+
+  [data-animate="fade-down"]{
+    opacity: 0;
+    transform: translateY(100%);
+    transition: .3s ease-in-out .1s;
+    --opacity: 1;
+    --transform:translateY(0);
+  }
+
+  // cards
+  [data-animate="fade-right"]{
+    opacity: 0;
+    transform: translateX(-380px);
+    transition: .4s ease-in-out .2s;
+    
+    --opacity: 1;
+    --transform:translateX(0);
+  
+  }
+  [data-animate="fade-left"]{
+    opacity: 0;
+    transform: translateX(380px);
+    transition: .4s ease-in-out .2s;
+    
+    --opacity: 1;
+    --transform:translateX(0);
+  
+  }
+  
+
+.unset{
+    opacity: var(--opacity);
+    transform: var(--transform);
+
+}

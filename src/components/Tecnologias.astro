@@ -1,25 +1,69 @@
 ---
 import { Icons } from "../data/menuItem";
-
 ---
 
 <section id="tecnologías" class="tech">
-    <div class="content content__tech">
-        <h2>Tecnologías</h2>
-        <p class="" data-aos="fade-right">
-            Conocimientos que he adquirido durante mi carrera universitaria y puesto en práctica.
-        </p>
-        <div class="tech__tech-icons">
-            <div class="leng">
-                {
-                    Icons.map((icon)=>
-                        <div class="tech__icon">
-                            <img src={`img/lenguajes/${icon.nameImg}`} alt={`${icon.title}`} />
-                            <span>{icon.title}</span>
-                        </div>
-                    )
-                }
-            </div>
-        </div>
+  <div id="technology" class="content content__tech">
+    <div id="title_tech" style="display:block;" >
+      <h2>Tecnologías</h2>
+      <p data-animate="fade-down" class="fade-animation">
+        Conocimientos que he adquirido durante mi carrera universitaria y puesto
+        en práctica.
+      </p>
     </div>
+    <div class="tech__tech-icons">
+      <div class="leng">
+        {
+          Icons.map((icon) => (
+            <div class="tech__icon">
+              <img
+                data-animate="fade-down"
+                src={`img/lenguajes/${icon.nameImg}`}
+                alt={`${icon.title}`}
+              />
+              <span data-animate="fade-down" >{icon.title}</span>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
 </section>
+
+<script>
+  function triggerFuction(entries) {
+    entries.forEach((entry) => {
+        if (entry.target.id === "title_tech") {
+          TitleTech(entry);
+        } else if (entry.target.className === "tech__icon") {
+          TechIcons(entry);
+        }
+      });
+  }
+
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5,
+  };
+
+  const techObserver = new IntersectionObserver(triggerFuction, options);
+
+  const titleTech = document.querySelector("#title_tech");
+  const techIcons = document.querySelectorAll(".tech__icon");
+
+  techObserver.observe(titleTech);
+  techIcons.forEach((icon) => techObserver.observe(icon));
+
+  const TitleTech = (entry) => {
+    const p = entry.target.querySelector("p");
+    p.classList.toggle("unset", entry.isIntersecting);
+  };
+
+  const TechIcons = (entry) => {
+    const img = entry.target.querySelector("img");
+    const span = entry.target.querySelector("span");
+    img.classList.toggle("unset", entry.isIntersecting);
+    span.classList.toggle("unset", entry.isIntersecting);
+  };
+</script>

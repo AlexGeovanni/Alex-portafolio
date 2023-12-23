@@ -1,47 +1,77 @@
 ---
+import { it } from 'node:test';
 import type{ProjectItem} from '../../data/menuItem'
 
 interface Itemss{
     item?:ProjectItem
+    count?:number
 }
 
 
-const { item }:Itemss= Astro.props;
+const { item,count }:Itemss= Astro.props;
 ---
 
-<div id="card" class="card">
-    <picture class="card__img">
-        <img src={`img/img_projects/App_${item.nameImg}.jpg`} alt=`${item.title +"__"+ item.nameImg}`>
-    </picture>
-    <div class="card__info">
-        <h3>{item.title}</h3>
-        <p>{item.content}</p>
-        <div class="info__tech">
-            {
-                item.tecnologias.map((e)=> <span>{e}</span>)
-            }
-        </div>
-        <div class="info__view">
-            <a href={item.repos} target="_blank" rel="noopener noreferrer">
-                <?xml version="1.0" encoding="utf-8"?>
-                <svg data-svg fill="#333333" width="40px" height="40px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18A2.69,2.69,0,0,0,5,16.5c-.91-.62.07-.6.07-.6a2.1,2.1,0,0,1,1.53,1,2.15,2.15,0,0,0,2.91.83,2.16,2.16,0,0,1,.63-1.34C8,16.17,5.62,15.31,5.62,11.5a3.87,3.87,0,0,1,1-2.71,3.58,3.58,0,0,1,.1-2.64s.84-.27,2.75,1a9.63,9.63,0,0,1,5,0c1.91-1.29,2.75-1,2.75-1a3.58,3.58,0,0,1,.1,2.64,3.87,3.87,0,0,1,1,2.71c0,3.82-2.34,4.66-4.57,4.91a2.39,2.39,0,0,1,.69,1.85V21c0,.27.16.59.67.5A10,10,0,0,0,12,2Z"/>
-                </svg>
-            </a>
-
-            {item.deploy && <a href={item.deploy} target="_blank" rel="noopener noreferrer">
-                <?xml version="1.0" encoding="utf-8"?>
-                <svg fill="#333333"  xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 33 32" >
-                	<path d="M0.004,10.895c0.001,0.722,0.446,1.325,1.135,1.539l12.019,3.724c0.192,0.06,0.329,0.229,0.349,0.43
-                		l1.361,13.949c0.094,0.962,0.889,1.466,1.625,1.466c0.612,0,1.147-0.328,1.432-0.878L32.817,2.354
-                		c0.261-0.504,0.241-1.093-0.052-1.575c-0.032-0.053-0.082-0.089-0.12-0.138c-0.014-0.024-0.02-0.05-0.038-0.072
-                		c-0.025-0.03-0.057-0.048-0.086-0.071c-0.418-0.419-1.039-0.606-1.618-0.425L1.136,9.354C0.448,9.568,0.004,10.174,0.004,10.895z
-                		M17.035,30.665c-0.151,0.293-0.405,0.337-0.543,0.337c-0.276,0-0.592-0.176-0.629-0.563l-1.361-13.949
-                		c-0.012-0.124-0.048-0.241-0.089-0.355L31.986,1.725c-0.011,0.054-0.027,0.11-0.057,0.169L17.035,30.665z M1.434,10.309
-                		l29.768-9.281c0.024-0.008,0.048-0.007,0.072-0.011L13.781,15.359c-0.103-0.062-0.209-0.121-0.327-0.157L1.436,11.479
-                		C1.036,11.354,1.004,11,1.004,10.894C1.004,10.676,1.117,10.407,1.434,10.309z"/>
-                </svg>
-            </a>}
+<div class="element_card">
+    <div data-animate={item.animate} class="card">
+        <picture class="card__img">
+            <img src={`img/img_projects/App_${item.nameImg}.jpg`} alt=`${item.title +"__"+ item.nameImg}`>
+        </picture>
+        <div class="card__info">
+            <h3>{item.title}</h3>
+            <p>{item.content}</p>
+            <div class="info__tech">
+                {
+                    item.tecnologias.map((e)=> <span>{e}</span>)
+                }
+            </div>
+            <div class="info__view">
+                <a href={item.repos} target="_blank" rel="noopener noreferrer">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <svg data-svg fill="#333333" width="40px" height="40px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18A2.69,2.69,0,0,0,5,16.5c-.91-.62.07-.6.07-.6a2.1,2.1,0,0,1,1.53,1,2.15,2.15,0,0,0,2.91.83,2.16,2.16,0,0,1,.63-1.34C8,16.17,5.62,15.31,5.62,11.5a3.87,3.87,0,0,1,1-2.71,3.58,3.58,0,0,1,.1-2.64s.84-.27,2.75,1a9.63,9.63,0,0,1,5,0c1.91-1.29,2.75-1,2.75-1a3.58,3.58,0,0,1,.1,2.64,3.87,3.87,0,0,1,1,2.71c0,3.82-2.34,4.66-4.57,4.91a2.39,2.39,0,0,1,.69,1.85V21c0,.27.16.59.67.5A10,10,0,0,0,12,2Z"/>
+                    </svg>
+                </a>
+    
+                {item.deploy && <a href={item.deploy} target="_blank" rel="noopener noreferrer">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <svg fill="#333333"  xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 33 32" >
+                        <path d="M0.004,10.895c0.001,0.722,0.446,1.325,1.135,1.539l12.019,3.724c0.192,0.06,0.329,0.229,0.349,0.43
+                            l1.361,13.949c0.094,0.962,0.889,1.466,1.625,1.466c0.612,0,1.147-0.328,1.432-0.878L32.817,2.354
+                            c0.261-0.504,0.241-1.093-0.052-1.575c-0.032-0.053-0.082-0.089-0.12-0.138c-0.014-0.024-0.02-0.05-0.038-0.072
+                            c-0.025-0.03-0.057-0.048-0.086-0.071c-0.418-0.419-1.039-0.606-1.618-0.425L1.136,9.354C0.448,9.568,0.004,10.174,0.004,10.895z
+                            M17.035,30.665c-0.151,0.293-0.405,0.337-0.543,0.337c-0.276,0-0.592-0.176-0.629-0.563l-1.361-13.949
+                            c-0.012-0.124-0.048-0.241-0.089-0.355L31.986,1.725c-0.011,0.054-0.027,0.11-0.057,0.169L17.035,30.665z M1.434,10.309
+                            l29.768-9.281c0.024-0.008,0.048-0.007,0.072-0.011L13.781,15.359c-0.103-0.062-0.209-0.121-0.327-0.157L1.436,11.479
+                            C1.036,11.354,1.004,11,1.004,10.894C1.004,10.676,1.117,10.407,1.434,10.309z"/>
+                    </svg>
+                </a>}
+            </div>
         </div>
     </div>
 </div>
+
+
+<script>
+
+    const triggerFuction = (entries,observer)=>{
+        entries.forEach((entry)=>{
+            const element = entry.target.querySelector("div")
+            entry.target.classList.toggle("after",entry.isIntersecting)
+            element.classList.toggle("unset",entry.isIntersecting)
+            
+        })
+    }
+    const options = {
+        root:null,
+        rootMargin:"15px",
+        threshold:0.1
+    }
+    
+    const CardObserver = new IntersectionObserver(triggerFuction,options)
+    const card = document.querySelectorAll(".element_card")
+    card.forEach((e)=>{
+        CardObserver.observe(e)
+    })
+ 
+
+</script>

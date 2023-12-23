@@ -3,9 +3,20 @@
 header{
     padding: 18px 0;
     position: fixed;
-    backdrop-filter: blur(10px);
+    
     width: 100%;
     z-index: 100;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 65px;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        z-index: -1;
+    }
     @media screen and (min-width:768px) {
     padding: 22px 0;
     }
@@ -30,8 +41,9 @@ header{
     
     & .nav__items{
         position: fixed;
+        background-color: transparent;
         width: 100%;
-        top: 65px;
+        top: 64px;
         right: 0;
         opacity: 0;
         transform: translateY(-400px);
@@ -44,9 +56,9 @@ header{
             border-left: 2px solid variables.$color-border-l;
             border-right: 2px solid variables.$color-border-l;
             border-bottom: 2px solid variables.$color-border-l;
-            background-color: variables.$bg-header-l;
-            box-shadow: 1px 12px 15px -16px variables.$color-body-d;
+            background: variables.$bg-header-l;
             border-radius:5px;
+            backdrop-filter: blur(9px);
             & li {
                 border-radius: 5px;
                 & > a{

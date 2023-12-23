@@ -12,6 +12,7 @@ export interface ProjectItem{
     tecnologias:Array<String>
     repos:string
     deploy:string
+    animate:string
 }
 
 /**
@@ -44,7 +45,8 @@ export const Projects:Array<ProjectItem> = [
         content:"Página web simulación de un tienda en linea, donde puedes registrarte e iniciar sessión, muestra todos los productos filtrar los dato y carrito de compras :",
         tecnologias:["React","Html5","Sass","Bootstrap","JavaScript"],
         repos:"https://github.com/AlexGeovanni/App-ecoomercer-react",
-        deploy:"https://app-ecoomercer-react.vercel.app/"
+        deploy:"https://app-ecoomercer-react.vercel.app/",
+        animate:"fade-right"
 
     },
     {
@@ -53,7 +55,8 @@ export const Projects:Array<ProjectItem> = [
         content:"CRUD más información en el repositorio, actualmente el servicio donde se alojó ha caducado, construida con :",
         tecnologias:["JavaScript","nodejs","Express","MySQL"],
         repos:"https://github.com/AlexGeovanni/API_REST_DESEMPLEO",
-        deploy:""
+        deploy:"",
+        animate:"fade-left"
     },
     {
         nameImg:"aluraflix",
@@ -61,7 +64,8 @@ export const Projects:Array<ProjectItem> = [
         content:"Sitio web para ver videos respecto a Alura, responsivo, construida con :",
         tecnologias:["React","Html5","Css3","JavaScript"],
         repos:"https://github.com/AlexGeovanni/Aluraflixx",
-        deploy:"https://aluraflixx.vercel.app/"
+        deploy:"https://aluraflixx.vercel.app/",
+        animate:"fade-right"
     },
     // {
     //     nameImg:"tasklist",
@@ -89,7 +93,8 @@ export const Projects:Array<ProjectItem> = [
         content:"Réplica del inicio del sitio web de Disney, no es responsivo, construida con :",
         tecnologias:["Html5","Css3","JavaScript"],
         repos:"https://github.com/AlexGeovanni/miniProyect_Disney",
-        deploy:"https://alexgeovanni.github.io/miniProyect_Disney/Interface_Disney/Index.html"
+        deploy:"https://alexgeovanni.github.io/miniProyect_Disney/Interface_Disney/Index.html",
+        animate:"fade-left"
     },
     
 ]
