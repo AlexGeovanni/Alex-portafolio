@@ -3,7 +3,7 @@
 header{
     padding: 18px 0;
     position: fixed;
-    
+    top: 0;
     width: 100%;
     z-index: 100;
     &::after{
@@ -126,6 +126,7 @@ header{
             width: auto;
             opacity: 1;
             transform: translateY(0px);
+            backdrop-filter: blur(0);
             & ul{
                 width: auto;
                 background-color: transparent;
