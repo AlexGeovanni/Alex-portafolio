@@ -31,7 +31,7 @@ function Home(entry) {
     const element = entry.target.querySelector('#profil');
     const img = entry.target.querySelector('#profil img');
     const h1 = entry.target.querySelector('#titles h1');
-    const h3 = entry.target.querySelector('#titles h3');
+    const h3 = entry.target.querySelector('#titles div > div');
 
     element.classList.toggle('unset',entry.isIntersecting);
     img.classList.toggle('unset',entry.isIntersecting);

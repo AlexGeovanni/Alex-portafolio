@@ -23,13 +23,14 @@ body{
         background-color:variables.$bg-header-l;
     }
 
-    h2{
+    h2.title{
         color: variables.$color-title-l;
     }
     
     h3{
         color: variables.$color-title-l;
     }
+    
 }
 
 //  modo dark
@@ -66,6 +67,7 @@ body.dark-mod{
 
     // Home
     .content__home{
+        
         & .home__info{
             h1{
                 span {
@@ -73,15 +75,16 @@ body.dark-mod{
                 }
             }
         }
+
         & > p.sub-title{
             color: variables.$color-title-d;
         }
+
+        & p.specialty{
+            color: variables.$color-title-d !important;
+        }
     }
 
-    // Contacto
-    input,textarea{
-        color: variables.$color-title-d;
-    }
 
     // Proyectos
     .project__content{
@@ -112,6 +115,39 @@ body.dark-mod{
             }
         }
     } 
+
+    & .formation__info{
+        & ::before{
+
+            background-color: variables.$color-body-l;
+        }
+        & ::after{
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: 26px;
+            left: -5px;
+            border-radius: 100px;
+            background-color: variables.$color-body-l;
+            box-shadow: 0px 0px 0px 2px variables.$color-body-d;
+        }
+        & p{
+            & > a{
+                color:variables.$color-text-d !important;
+                text-decoration:underline; 
+                &:hover{
+                    color:variables.$color-text-l !important;
+                }
+            }
+        }
+    }
+
+
+     // Contacto
+     input,textarea{
+        color: variables.$color-title-d;
+    }
     
 
     // Footer
@@ -160,7 +196,7 @@ p{
 
 
 @media screen and (min-width:768px) {
-        .content{
+    .content{
             width: 90%;
     }
 
@@ -179,7 +215,7 @@ p{
 
 @media screen and (min-width:1024px) {
         .content{
-            width: 75%;
+            width: 70%;
         }
         h2{
             font-size: variables.$fg-h2-text;

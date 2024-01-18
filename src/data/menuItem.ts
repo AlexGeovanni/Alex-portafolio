@@ -121,12 +121,36 @@ export const Icons =[
         title:"CSS3"
     },
     {
+        nameImg:"astro_img.png",
+        title:"Astro"
+    },
+    {
         nameImg:"sass_img.png",
         title:"Sass"
     },
     {
+        nameImg:"bootstrap_img.png",
+        title:"Bootstrap"
+    },
+    {
+        nameImg:"java_img.png",
+        title:"Java"
+    },
+    {
+        nameImg:"spring_img.png",
+        title:"Spring-boot"
+    },
+    {
+        nameImg:"nodejs_img.png",
+        title:"NodeJs"
+    },
+    {
         nameImg:"mysql_img.png",
         title:"MySQL"
+    },
+    {
+        nameImg:"oracle_img.png",
+        title:"Oracle"
     },    
     {
         nameImg:"postman_img.png",
@@ -141,31 +165,12 @@ export const Icons =[
         title:"GitHub"
     },
     {
-        nameImg:"oracle_img.png",
-        title:"Oracle"
-    },
-    {
         nameImg:"figma_img.png",
         title:"Figma"
-    },
-    {
-        nameImg:"java_img.png",
-        title:"Java"
-    },
-    {
-        nameImg:"nodejs_img.png",
-        title:"NodeJs"
-    },
-    {
-        nameImg:"bootstrap_img.png",
-        title:"Bootstrap"
     },
     {
         nameImg:"vercel_img.png",
         title:"Vercel"
     },
-    {
-        nameImg:"astro_img.png",
-        title:"Astro"
-    },
+    
 ]

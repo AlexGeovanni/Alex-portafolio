@@ -18,7 +18,7 @@ body {
 body header {
   background-color: transparent;
 }
-body h2 {
+body h2.title {
   color: #023a5c;
 }
 body h3 {
@@ -53,8 +53,8 @@ body.dark-mod .content__home .home__info h1 span {
 body.dark-mod .content__home > p.sub-title {
   color: #e8ebec;
 }
-body.dark-mod input, body.dark-mod textarea {
-  color: #e8ebec;
+body.dark-mod .content__home p.specialty {
+  color: #e8ebec !important;
 }
 body.dark-mod .project__content .title__project a svg {
   fill: #C8CDD0;
@@ -71,6 +71,30 @@ body.dark-mod div.card {
 }
 body.dark-mod div.card .card__info p {
   color: #d9dee0;
+}
+body.dark-mod .formation__info ::before {
+  background-color: #FBFBFE;
+}
+body.dark-mod .formation__info ::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 26px;
+  left: -5px;
+  border-radius: 100px;
+  background-color: #FBFBFE;
+  box-shadow: 0px 0px 0px 2px rgb(17, 27, 34);
+}
+body.dark-mod .formation__info p > a {
+  color: #C8CDD0 !important;
+  text-decoration: underline;
+}
+body.dark-mod .formation__info p > a:hover {
+  color: #50585a !important;
+}
+body.dark-mod input, body.dark-mod textarea {
+  color: #e8ebec;
 }
 body.dark-mod .content__footer {
   border-top: 1px solid #2A3B47;
@@ -129,7 +153,7 @@ p {
 }
 @media screen and (min-width: 1024px) {
   .content {
-    width: 75%;
+    width: 70%;
   }
   h2 {
     font-size: 2rem;
@@ -257,7 +281,7 @@ header::after {
 }
 @media screen and (min-width: 768px) {
   .Hearder__nav {
-    width: 80%;
+    width: 75%;
   }
   .Hearder__nav .menu_hambg {
     display: none;
@@ -335,7 +359,11 @@ header::after {
   font-size: 2.4rem;
   color: #023a5c;
 }
-.home .content__home .home__info > h3 {
+.home .content__home .home__info p.specialty {
+  font-size: 1.25rem;
+  color: #023a5c;
+}
+.home .content__home .home__info > p {
   font-size: 1.25rem;
   margin: 10px 0;
   font-weight: 400;
@@ -391,6 +419,9 @@ header::after {
   .home .content__home .home__info h1 span {
     font-size: 1.8rem;
   }
+  .home .content__home .home__info p.specialty {
+    font-size: 1.35rem;
+  }
   .home .content__home .home__info > p {
     margin: 18px 0;
     font-size: 1.3rem;
@@ -431,7 +462,8 @@ header::after {
 .tech .content__tech div .tech__icon img {
   width: 55px;
   margin: auto;
-  object-fit: cover;
+  object-fit: contain;
+  aspect-ratio: 3/3;
   cursor: pointer;
 }
 .tech .content__tech div .tech__icon span {
@@ -590,52 +622,62 @@ header::after {
   margin-bottom: 10px;
 }
 .content__formations .formation__info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0 20px;
+  padding: 20px 18px;
+  position: relative;
 }
-.content__formations .formation__info .info__img {
-  display: block;
-  width: 150px;
+.content__formations .formation__info ::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(17, 27, 34);
 }
-.content__formations .formation__info .info__img img {
-  width: 100%;
-  object-fit: cover;
+.content__formations .formation__info ::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 26px;
+  left: -5px;
+  border-radius: 100px;
+  background-color: rgb(17, 27, 34);
+  box-shadow: 0px 0px 0px 2px #FBFBFE;
 }
-.content__formations .formation__info > div {
-  padding: 0 10px;
-  text-align: center;
+.content__formations .formation__info:first-child {
+  padding-top: 10px;
+}
+.content__formations .formation__info:first-child ::after {
+  top: 16px;
 }
 .content__formations .formation__info > div p {
   line-height: 14px;
   margin: 5px 0;
 }
+.content__formations .formation__info > div p > a {
+  color: #50585a;
+  text-decoration: underline;
+}
+.content__formations .formation__info > div p > a:hover {
+  color: #C8CDD0;
+}
 .content__formations .formation__info > div span {
   font-size: 0.8rem;
 }
 @media screen and (min-width: 768px) {
-  .content__formations .formation__info {
-    max-width: 350px;
-    flex-direction: column;
-    gap: 15px 0;
-  }
-  .content__formations .formation__info .info__img {
-    width: 200px;
+  .content__formations .formation__info span {
+    font-size: 0.85rem;
   }
   .content__formations .formation__info > div {
-    padding: 0 10px;
-    text-align: center;
+    margin-top: 5px;
   }
   .content__formations .formation__info > div h3 {
     font-size: 1.4rem;
   }
   .content__formations .formation__info > div p {
     line-height: 18px;
-    margin: 5px 0;
-  }
-  .content__formations .formation__info > div span {
-    font-size: 0.85rem;
   }
 }
 

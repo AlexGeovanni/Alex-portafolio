@@ -52,9 +52,13 @@
                 }
             }
 
-
-            & > h3{
+            & p.specialty{
                 font-size: 1.250rem;
+                color: variables.$color-title-l;
+            }
+
+            & >p{
+                font-size: 1.250rem ;
                 margin: 10px 0;
                 font-weight: 400;
             }
@@ -112,6 +116,9 @@
                     span {
                         font-size: 1.8rem;
                     }
+                }
+                & p.specialty{
+                    font-size: 1.350rem;
                 }
     
                 & > p{

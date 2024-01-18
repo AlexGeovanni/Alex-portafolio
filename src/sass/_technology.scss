@@ -25,7 +25,8 @@
                 img{
                     width: 55px;
                     margin: auto;
-                    object-fit: cover;
+                    object-fit:contain;
+                    aspect-ratio: 3/3;
                     cursor: pointer;
                 }
                 span {
