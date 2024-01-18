@@ -185,6 +185,7 @@ header::after {
   height: 65px;
   background-color: transparent;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   z-index: -1;
 }
 @media screen and (min-width: 768px) {
@@ -230,6 +231,7 @@ header::after {
   background: transparent;
   border-radius: 5px;
   backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
 }
 .Hearder__nav .nav__items ul li {
   border-radius: 5px;
