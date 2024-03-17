@@ -534,6 +534,7 @@ header::after {
 .content__about-me div > p {
   line-height: 28px;
   max-width: 75ch;
+  margin-top: 15px;
 }
 .content__about-me div > p > span {
   font-weight: 600;
