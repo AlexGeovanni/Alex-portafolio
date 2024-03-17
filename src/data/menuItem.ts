@@ -21,7 +21,7 @@ export interface ProjectItem{
 
 export const Menu:Array<MenuItem> = [
     {
-        title:"inicio"
+        title:"Inicio"
     },
     {
         title:"Tecnologías"
@@ -31,9 +31,6 @@ export const Menu:Array<MenuItem> = [
     },
     {
         title:"Formación"
-    },
-    {
-        title:"Contacto"
     }
 ]
 
@@ -42,7 +39,7 @@ export const Projects:Array<ProjectItem> = [
     {
         nameImg:"ecommerce",
         title:"E-commerce",
-        content:"Página web simulación de un tienda en linea, donde puedes registrarte e iniciar sessión, muestra todos los productos filtrar los dato y carrito de compras :",
+        content:"Página web simulación de un tienda en linea, donde puedes registrarte e iniciar sessión, muestra todos los productos filtrar los dato y carrito de compras.",
         tecnologias:["React","Html5","Sass","Bootstrap","JavaScript"],
         repos:"https://github.com/AlexGeovanni/App-ecoomercer-react",
         deploy:"https://app-ecoomercer-react.vercel.app/",
@@ -52,7 +49,7 @@ export const Projects:Array<ProjectItem> = [
     {
         nameImg:"api_rest",
         title:"Api REST",
-        content:"CRUD más información en el repositorio, actualmente el servicio donde se alojó ha caducado, construida con :",
+        content:"CRUD más información en el repositorio, actualmente el servicio donde se alojó ha caducado.",
         tecnologias:["JavaScript","nodejs","Express","MySQL"],
         repos:"https://github.com/AlexGeovanni/API_REST_DESEMPLEO",
         deploy:"",
@@ -61,7 +58,7 @@ export const Projects:Array<ProjectItem> = [
     {
         nameImg:"aluraflix",
         title:"AluraFlix",
-        content:"Sitio web para ver videos respecto a Alura, responsivo, construida con :",
+        content:"Un proyecto de un sitio web para ver videos respecto a Alura, responsivo.",
         tecnologias:["React","Html5","Css3","JavaScript"],
         repos:"https://github.com/AlexGeovanni/Aluraflixx",
         deploy:"https://aluraflixx.vercel.app/",
@@ -90,7 +87,7 @@ export const Projects:Array<ProjectItem> = [
     {
         nameImg:"repli_disney",
         title:"Disney",
-        content:"Réplica del inicio del sitio web de Disney, no es responsivo, construida con :",
+        content:"Réplica del inicio del sitio web de Disney, no es responsivo.",
         tecnologias:["Html5","Css3","JavaScript"],
         repos:"https://github.com/AlexGeovanni/miniProyect_Disney",
         deploy:"https://alexgeovanni.github.io/miniProyect_Disney/Interface_Disney/Index.html",
@@ -100,10 +97,7 @@ export const Projects:Array<ProjectItem> = [
 ]
 
 export const Icons =[
-    {
-        nameImg:"react_img.png",
-        title:"Reactjs"
-    },
+    
     {
         nameImg:"javascript_img.png",
         title:"JavaScript"
@@ -115,6 +109,10 @@ export const Icons =[
     {
         nameImg:"html_img.png",
         title:"HTML5"
+    },
+    {
+        nameImg:"react_img.png",
+        title:"Reactjs"
     },
     {
         nameImg:"css_img.png",
@@ -141,24 +139,19 @@ export const Icons =[
         title:"Spring-boot"
     },
     {
-        nameImg:"nodejs_img.png",
-        title:"NodeJs"
-    },
-    {
         nameImg:"mysql_img.png",
         title:"MySQL"
     },
     {
         nameImg:"oracle_img.png",
-        title:"Oracle"
-    },    
-    {
-        nameImg:"postman_img.png",
-        title:"Postman"
+        title:"SQL Server"
     },
     {
         nameImg:"git_img.png",
         title:"Git"
+    },{
+        nameImg:"docker_img.png",
+        title:"Docker"
     },
     {
         nameImg:"github_img.png",
@@ -167,10 +160,6 @@ export const Icons =[
     {
         nameImg:"figma_img.png",
         title:"Figma"
-    },
-    {
-        nameImg:"vercel_img.png",
-        title:"Vercel"
-    },
+    }
     
 ]

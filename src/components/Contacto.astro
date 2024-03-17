@@ -5,12 +5,10 @@
   <div id="content__contact" class="content content__contact">
     <h2 class="title">Contáctame</h2>
     <div>
-        <div id="info" data-animate="fade-right" class="contact__info">
-            <p>Puedes contactarmen en cualquier momento.</p>
+        <div id="info" class="contact__info">
+            <p>Puedes contactarme en cualquier momento.</p>
             <h3>Email</h3>
-            <p>Geovanialex4@gmail.com</p>
-            <h3>Telefono</h3>
-            <p>961-314-5394</p>
+            <p>geovanialex4@gmail.com</p>
             <div class="redes">
               <a
                 href="https://github.com/AlexGeovanni"
@@ -58,29 +56,13 @@
               </a>
             </div>
           </div>
-          <form  data-animate="fade-left" id="contact_form" action="">
-            <div class="form__inputs">
-              <div class="input__name">
-                <input type="text" id="nombre" required />
-                <span>Nombre</span>
-              </div>
-              <div class="input__email">
-                <input type="email" id="correo" required />
-                <span>Correo electronico</span>
-              </div>
-            </div>
-            <div class="form__textarea">
-              <textarea id="textarea" cols="20" rows="7" required></textarea>
-              <span>Mensaje</span>
-            </div>
-            <button type="submit">Enviar</button>
-          </form>
+          
         </div>
     </div>
 </section>
 
 <script>
-  const form = document.querySelector("#contact_form");
+  /*const form = document.querySelector("#contact_form");
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -90,15 +72,16 @@
     const Msj = (document.querySelector("#email") as HTMLInputElement).value;
 
     window.location.href = `mailto:geovanialex8@gmail.com?subject=envioDesdeFormulario&body=Nombre%3A${Nombre}%0ACorrreo%3A${Email}%0AMensaje%3A${Msj}`;
-  });
+  });*/
   // animate
   const triggerFuction = (entries: any) => {
       entries.forEach((entry: any) => {
         const info = entry.target.querySelector("#info");
         const form = entry.target.querySelector("#contact_form");
-
-        info.classList.toggle("unset", entry.isIntersecting);
-        form.classList.toggle("unset", entry.isIntersecting);
+        if(entry.isIntersecting){
+          info.classList.add("unset");
+          form.classList.add("unset");
+        }
 
       });
     };

@@ -93,6 +93,9 @@ body.dark-mod .formation__info p > a {
 body.dark-mod .formation__info p > a:hover {
   color: #50585a !important;
 }
+body.dark-mod .tech .tech__tech-icons img.GitHub {
+  filter: invert(100%) brightness(1000%);
+}
 body.dark-mod input, body.dark-mod textarea {
   color: #e8ebec;
 }
@@ -153,7 +156,7 @@ p {
 }
 @media screen and (min-width: 1024px) {
   .content {
-    width: 70%;
+    max-width: 1024px;
   }
   h2 {
     font-size: 2rem;
@@ -162,7 +165,7 @@ p {
     font-size: 1.35rem;
   }
   p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 }
 @media screen and (min-width: 1680px) {
@@ -183,16 +186,11 @@ header::after {
   top: 0;
   left: 0;
   width: 100%;
-  height: 65px;
+  height: 100%;
   background-color: transparent;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: -1;
-}
-@media screen and (min-width: 768px) {
-  header {
-    padding: 22px 0;
-  }
 }
 
 .Hearder__nav {
@@ -213,6 +211,10 @@ header::after {
 }
 .Hearder__nav .nav__items {
   position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
   width: 100%;
   top: 64px;
@@ -253,7 +255,7 @@ header::after {
   left: 0;
   width: 0;
   height: 100%;
-  background-color: #1083D6;
+  background-color: #1083d6;
   border-radius: 5px;
 }
 .Hearder__nav .nav__items ul li > a:active:before {
@@ -261,7 +263,7 @@ header::after {
 }
 .Hearder__nav .nav__items ul li > a:hover {
   background-color: rgba(104, 185, 243, 0.2);
-  color: #1083D6;
+  color: #1083d6;
   transition: background-color 0.3s ease-in-out;
 }
 .Hearder__nav .nav__items ul.dark-ul {
@@ -273,6 +275,24 @@ header::after {
 .Hearder__nav .nav__items ul.dark-ul li > a {
   color: #e2e2e2;
 }
+.Hearder__nav .nav__items .download {
+  display: flex;
+}
+.Hearder__nav .nav__items .download > a {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding: 8px 12px;
+  background-color: #0a6cad;
+  border-radius: 5px;
+}
+.Hearder__nav .nav__items .download > a:hover {
+  background-color: #2286ce;
+  color: #ffffff;
+  transition: background-color 0.3s ease-in-out;
+}
 .Hearder__nav .show {
   opacity: 1;
   transform: translateY(0px);
@@ -283,6 +303,43 @@ header::after {
   display: none;
 }
 @media screen and (min-width: 768px) {
+  .Hearder__nav {
+    margin: auto;
+    padding: 0 15px;
+  }
+  .Hearder__nav .menu_hambg {
+    display: none;
+  }
+  .Hearder__nav .nav__items {
+    position: static;
+    width: auto;
+    opacity: 1;
+    transform: translateY(0px);
+    backdrop-filter: blur(0);
+  }
+  .Hearder__nav .nav__items ul {
+    width: auto;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    display: flex;
+    gap: 0 8px;
+    box-shadow: none;
+  }
+  .Hearder__nav .nav__items ul li > a {
+    padding: 10px 14px;
+  }
+  .Hearder__nav .nav__items ul.dark-ul {
+    background-color: transparent;
+    border: none;
+  }
+  .Hearder__nav .nav__items .download a {
+    margin: 0;
+    padding: 10px 25px;
+  }
+}
+@media screen and (min-width: 1024px) {
   .Hearder__nav {
     width: 75%;
   }
@@ -303,27 +360,53 @@ header::after {
     border-radius: 0;
     padding: 0;
     display: flex;
-    gap: 0 10px;
+    gap: 0 8px;
     box-shadow: none;
   }
   .Hearder__nav .nav__items ul li > a {
-    padding: 8px 12px;
+    padding: 10px 14px;
   }
   .Hearder__nav .nav__items ul.dark-ul {
     background-color: transparent;
     border: none;
   }
+  .Hearder__nav .nav__items .download a {
+    margin: 0;
+    padding: 10px 25px;
+  }
 }
 
-.redes {
-  margin: 22px 0;
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.contact > .email__contact {
+  display: flex;
+  margin-right: 15px;
+}
+.contact > .email__contact > a {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 25px;
+  background-color: #0a6cad;
+  border-radius: 5px;
+}
+.contact > .email__contact > a:hover {
+  background-color: #2286ce;
+  color: #ffffff;
+  transition: background-color 0.3s ease-in-out;
+}
+.contact > .redes__contact {
   display: flex;
   align-items: center;
 }
-.redes a:first-child {
+.contact > .redes__contact a:first-child {
   margin-right: 15px;
 }
-.redes svg:hover {
+.contact > .redes__contact svg:hover {
   fill: #000000;
   transform: scale(1.07);
   transition: all 0.3s ease-in-out;
@@ -337,9 +420,9 @@ header::after {
 }
 .home .content__home .content_profile {
   display: block;
-  max-width: 320px;
-  width: 290px;
-  height: 290px;
+  max-width: 100%;
+  width: 350px;
+  height: 350px;
   margin: 0 auto;
   background-color: rgba(104, 185, 243, 0.2);
   border-radius: 24% 76% 50% 50%/35% 37% 63% 65%;
@@ -349,13 +432,15 @@ header::after {
   border-radius: 50%;
   width: 100%;
   height: 100%;
-  padding-top: 30px;
+  padding-top: 65px;
   object-fit: contain;
+  transform: scale(1.2);
 }
 .home .content__home .home__info h1 {
   font-weight: 900;
+  max-width: 12ch;
   font-size: 2.4rem;
-  line-height: 40px;
+  line-height: 45px;
   color: #0475c0;
   letter-spacing: -1px;
 }
@@ -364,81 +449,94 @@ header::after {
   color: #023a5c;
 }
 .home .content__home .home__info p.specialty {
-  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1rem;
   color: #023a5c;
+  padding: 6px 0;
+  margin-top: 15px;
 }
-.home .content__home .home__info > p {
-  font-size: 1.25rem;
-  margin: 10px 0;
-  font-weight: 400;
+.home .content__home .home__info .resumen__info {
+  margin-top: 15px;
 }
-.home .content__home .home__info .about-me__info {
-  margin-top: 20px;
-}
-.home .content__home .home__info .about-me__info p {
+.home .content__home .home__info .resumen__info p {
   line-height: 20px;
   max-width: 70ch;
 }
-.home .content__home .home__info .about-me__info > p:first-of-type {
+.home .content__home .home__info .resumen__info > p:first-of-type {
   margin-bottom: 10px;
 }
-.home .content__home .home__info .about-me__info p a {
+.home .content__home .home__info .resumen__info p a {
   color: #098ce2;
 }
-.home .content__home .home__info .about-me__info p a:hover {
+.home .content__home .home__info .resumen__info p a:hover {
   color: rgb(3, 78, 128);
   transition: color 0.3s ease-in-out;
 }
-.home .content__home .home__info .download {
-  color: #ffffff;
-  padding: 13px 10px;
-  background-color: #0a6cad;
-  border-radius: 5px;
-}
-.home .content__home .home__info .download:hover {
-  background-color: #2286ce;
-  transition: background-color 0.3s ease-in-out;
-}
 @media screen and (min-width: 768px) {
   .home .content__home {
-    margin-top: 55px;
-    padding-bottom: 20px;
+    min-height: calc(-180px + 100vh);
+    margin-top: 120px;
     display: flex;
     align-items: start;
+    justify-content: space-between;
   }
   .home .content__home .content_profile {
     min-width: 285px;
+    width: 300px;
+    height: 300px;
     padding: 0;
+    align-content: start;
   }
   .home .content__home .home__info {
-    padding-left: 25px;
+    padding-left: 10px;
   }
   .home .content__home .home__info h1 {
-    max-width: 12ch;
-    font-size: 3rem;
-    line-height: 38px;
+    max-width: 13ch;
+    font-size: 2.8rem;
+    line-height: 40px;
     letter-spacing: 0px;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
   .home .content__home .home__info h1 span {
     font-size: 1.8rem;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 400;
   }
   .home .content__home .home__info p.specialty {
-    font-size: 1.35rem;
+    font-size: 1rem;
+    padding: 6px 0;
   }
   .home .content__home .home__info > p {
     margin: 18px 0;
     font-size: 1.3rem;
   }
-  .home .content__home .home__info .about-me__info {
-    margin-top: 40px;
+  .home .content__home .home__info .resumen__info {
+    margin-top: 20px;
   }
-  .home .content__home .home__info .about-me__info p {
-    line-height: 22px;
+  .home .content__home .home__info .resumen__info p {
+    line-height: 28px;
+    max-width: 50ch;
   }
-  .home .content__home .home__info .download {
-    padding: 13px 22px;
+}
+@media screen and (min-width: 1024px) {
+  .home .content__home .content_profile {
+    width: 360px;
+    height: 365px;
   }
+}
+
+.content__about-me div {
+  margin-top: 10px;
+}
+.content__about-me div > p {
+  line-height: 28px;
+  max-width: 75ch;
+}
+.content__about-me div > p > span {
+  font-weight: 600;
 }
 
 .tech {
@@ -472,7 +570,7 @@ header::after {
 }
 .tech .content__tech div .tech__icon span {
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
 }
 @media screen and (min-width: 768px) {
   .tech .content__tech div {
@@ -550,7 +648,9 @@ header::after {
   padding: 25px;
   background-color: #fdfdfd;
   border: 2px solid #EDEFF0;
-  border-radius: 5px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .card .card__img {
   display: block;
@@ -566,6 +666,10 @@ header::after {
 }
 .card .card__info {
   margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
 }
 .card .card__info h3 {
   font-size: 1.25rem;
@@ -615,6 +719,28 @@ header::after {
   }
   .card .card__info > p {
     font-size: 0.9rem;
+    line-height: 18px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card {
+    width: 100%;
+    height: 100%;
+  }
+  .card .card__img {
+    overflow: hidden;
+    border-radius: 3px;
+    width: 100%;
+  }
+  .card .card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 3/2;
+  }
+  .card .card__info > p {
+    font-size: 1rem;
+    line-height: 20px;
   }
 }
 
@@ -687,6 +813,94 @@ header::after {
 
 .contact {
   margin-top: 60px;
+  /*
+  & form{
+      width: 100%;
+      input,textarea{
+          width: 100%;
+          resize: none;
+          padding: 16px 20px 6px 12px;
+          font-size: 1.1rem;
+          font-weight: 400;
+          border-radius: 5px;
+          background-color: transparent;
+          border: 2px solid #2a3b47;
+      }
+
+      & .form__inputs{
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+          gap: 20px 10px;
+          & .input__name,.input__email{
+              width: 100%;
+              position: relative;
+              & span{
+                  position: absolute;
+                  font-size: 1.1rem;
+                  top: 18px;
+                  left: 13px;
+                  pointer-events: none;
+              }
+
+              input:valid ~span,
+              input:focus ~span{
+                  top: -11px;
+                  font-weight: 300;
+                  font-size: .9rem;
+                  padding: 0 5px;
+                  // background-color: rgb(17 27 34);
+                  background-color: variables.$color-body-l;
+                  transition: all .3s ease-in-out;
+                  &.dark-span{
+                      background-color: variables.$color-body-d;
+                  }
+              }
+          }
+
+      }
+
+      & .form__textarea{
+          margin-top: 20px;
+          position: relative;
+          & span{
+              position: absolute;
+              font-size: 1.1rem;
+              top: 18px;
+              left: 13px;
+              pointer-events: none;
+          }  
+          & textarea:valid ~span,
+          & textarea:focus ~span{
+              top: -11px;
+              font-weight: 300;
+              padding: 0 5px;
+              font-size: .9rem;
+              background-color: variables.$color-body-l;
+              transition: all .3s ease-in-out;
+              &.dark-span{
+                  background-color: variables.$color-body-d;
+              }
+          }
+
+      }
+
+      & button{
+          width: 100%;
+          margin-top: 12px;
+          color:white;
+          padding: 12px 0;
+          cursor: pointer;
+          font-size: 1.2rem;
+          border-radius: 5px;
+          border: none;
+          background-color: variables.$btn_bg;
+          &:hover{
+              background-color:variables.$btn_bg_hover;
+              transition:background-color .3s ease-in-out ;
+          }
+      }
+  }*/
 }
 .contact .content__contact > div {
   display: flex;
@@ -706,87 +920,8 @@ header::after {
 .contact .contact__info p {
   margin-top: 4px;
 }
-.contact form {
-  width: 100%;
-}
-.contact form input, .contact form textarea {
-  width: 100%;
-  resize: none;
-  padding: 16px 20px 6px 12px;
-  font-size: 1.1rem;
-  font-weight: 400;
-  border-radius: 5px;
-  background-color: transparent;
-  border: 2px solid #2a3b47;
-}
-.contact form .form__inputs {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  gap: 20px 10px;
-}
-.contact form .form__inputs .input__name, .contact form .form__inputs .input__email {
-  width: 100%;
-  position: relative;
-}
-.contact form .form__inputs .input__name span, .contact form .form__inputs .input__email span {
-  position: absolute;
-  font-size: 1.1rem;
-  top: 18px;
-  left: 13px;
-  pointer-events: none;
-}
-.contact form .form__inputs .input__name input:valid ~ span,
-.contact form .form__inputs .input__name input:focus ~ span, .contact form .form__inputs .input__email input:valid ~ span,
-.contact form .form__inputs .input__email input:focus ~ span {
-  top: -11px;
-  font-weight: 300;
-  font-size: 0.9rem;
-  padding: 0 5px;
-  background-color: #FBFBFE;
-  transition: all 0.3s ease-in-out;
-}
-.contact form .form__inputs .input__name input:valid ~ span.dark-span,
-.contact form .form__inputs .input__name input:focus ~ span.dark-span, .contact form .form__inputs .input__email input:valid ~ span.dark-span,
-.contact form .form__inputs .input__email input:focus ~ span.dark-span {
-  background-color: rgb(17, 27, 34);
-}
-.contact form .form__textarea {
-  margin-top: 20px;
-  position: relative;
-}
-.contact form .form__textarea span {
-  position: absolute;
-  font-size: 1.1rem;
-  top: 18px;
-  left: 13px;
-  pointer-events: none;
-}
-.contact form .form__textarea textarea:valid ~ span, .contact form .form__textarea textarea:focus ~ span {
-  top: -11px;
-  font-weight: 300;
-  padding: 0 5px;
-  font-size: 0.9rem;
-  background-color: #FBFBFE;
-  transition: all 0.3s ease-in-out;
-}
-.contact form .form__textarea textarea:valid ~ span.dark-span, .contact form .form__textarea textarea:focus ~ span.dark-span {
-  background-color: rgb(17, 27, 34);
-}
-.contact form button {
-  width: 100%;
-  margin-top: 12px;
-  color: white;
-  padding: 12px 0;
-  cursor: pointer;
-  font-size: 1.2rem;
-  border-radius: 5px;
-  border: none;
-  background-color: #0a6cad;
-}
-.contact form button:hover {
-  background-color: #2286ce;
-  transition: background-color 0.3s ease-in-out;
+.contact .contact__info > .redes {
+  margin-top: 10px;
 }
 @media screen and (min-width: 768px) {
   .contact .content__contact > div {

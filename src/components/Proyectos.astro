@@ -11,8 +11,8 @@ import Card from './cards/cards_proyect.astro';
 <section id="proyectos" class="project">
     <div class="content project__content">
         <div id="title_project"  class="title__project">
-            <h2 class="title">Proyectos</h2>
-            <p data-animate="fade-down">Para ver mas de mis proyectos revisa mi  
+            <h2 class="title">Proyectos destacados</h2>
+            <p data-animate="fade-down">Para ver más de mis proyectos revisa mi  
                 <a href="https://github.com/AlexGeovanni" target="_blank" rel="noopener noreferrer" aria-label="Perfil de github">
                     <?xml version="1.0" encoding="utf-8"?>
                     <svg data-svg fill="#333333" width="35px" height="35px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -32,10 +32,10 @@ import Card from './cards/cards_proyect.astro';
 </section>
 
 <script>
-    function triggerFuction(entries, observer){
+    function triggerFuction(entries){
         entries.forEach(entry => {
            const p = entry.target.querySelector('p');
-           p.classList.toggle('unset', entry.isIntersecting);
+           if(entry.isIntersecting) p.classList.add('unset');
         });
     }
 

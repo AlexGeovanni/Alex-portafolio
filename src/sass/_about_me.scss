@@ -27,3 +27,15 @@
 //     }
 
 // }
+
+.content__about-me div{
+    margin-top: 10px;
+
+    & > p{
+        line-height: 28px;
+        max-width: 75ch;
+        & > span{
+            font-weight: 600;
+        }
+    }
+}

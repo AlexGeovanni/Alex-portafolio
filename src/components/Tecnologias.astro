@@ -7,17 +7,18 @@ import { Icons } from "../data/menuItem";
     <div id="title_tech" style="display:block;" >
       <h2 class="title">Tecnologías</h2>
       <p data-animate="fade-down" class="fade-animation">
-        Conocimientos que he adquirido durante mi carrera universitaria y puesto
-        en práctica.
+        Un resumen sobre las tecnologias en las que he trabajado.
       </p>
     </div>
     <div class="tech__tech-icons">
       <div class="leng">
         {
           Icons.map((icon) => (
+            
             <div class="tech__icon">
               <img
                 data-animate="fade-down"
+                class={icon.title}
                 src={`img/lenguajes/${icon.nameImg}`}
                 alt={`${icon.title}`}
               />
@@ -43,12 +44,14 @@ import { Icons } from "../data/menuItem";
 
   const options = {
     root: null,
-    rootMargin: "0px",
+    rootMargin: "10px",
     threshold: 0.5,
   };
 
+  // Api  
   const techObserver = new IntersectionObserver(triggerFuction, options);
 
+  // Seleccionamos los elementos padres
   const titleTech = document.querySelector("#title_tech");
   const techIcons = document.querySelectorAll(".tech__icon");
 
@@ -57,13 +60,15 @@ import { Icons } from "../data/menuItem";
 
   const TitleTech = (entry) => {
     const p = entry.target.querySelector("p");
-    p.classList.toggle("unset", entry.isIntersecting);
+    if(entry.isIntersecting) p.classList.add("unset");
   };
 
   const TechIcons = (entry) => {
     const img = entry.target.querySelector("img");
     const span = entry.target.querySelector("span");
-    img.classList.toggle("unset", entry.isIntersecting);
-    span.classList.toggle("unset", entry.isIntersecting);
+    if(entry.isIntersecting){
+      img.classList.add("unset");
+      span.classList.add("unset");
+    }
   };
 </script>

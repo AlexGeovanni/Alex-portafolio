@@ -56,8 +56,10 @@ const { item,count }:Itemss= Astro.props;
     const triggerFuction = (entries,observer)=>{
         entries.forEach((entry)=>{
             const element = entry.target.querySelector("div")
-            entry.target.classList.toggle("after",entry.isIntersecting)
-            element.classList.toggle("unset",entry.isIntersecting)
+            if(entry.isIntersecting){
+                entry.target.classList.add("after")
+                element.classList.add("unset")
+            }
             
         })
     }
@@ -69,6 +71,7 @@ const { item,count }:Itemss= Astro.props;
     
     const CardObserver = new IntersectionObserver(triggerFuction,options)
     const card = document.querySelectorAll(".element_card")
+    
     card.forEach((e)=>{
         CardObserver.observe(e)
     })

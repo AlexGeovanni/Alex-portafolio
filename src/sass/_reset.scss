@@ -143,6 +143,13 @@ body.dark-mod{
         }
     }
 
+    .tech{
+        .tech__tech-icons{
+            & img.GitHub{
+                filter: invert(100%) brightness(1000%);
+            }
+        }
+    }
 
      // Contacto
      input,textarea{
@@ -215,7 +222,7 @@ p{
 
 @media screen and (min-width:1024px) {
         .content{
-            width: 70%;
+            max-width: 1024px;
         }
         h2{
             font-size: variables.$fg-h2-text;
