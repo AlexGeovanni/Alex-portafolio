@@ -1,22 +1,148 @@
 <section class="about-me">
   <div class="content content__about-me">
-    <h2 class="title">Sobre mi</h1>
+    <h2 class="title">Sobre mi</h2>
     <div class="">
       <p>
         Ademas de trabajar como desarrollador Frontend, tengo nociones en otras
-        areas como <span>Backend(Java - Spring-Boot) y conocimientos sobre Azure</span>.
+        areas como <span
+          >Backend(Java - Spring-Boot) y conocimientos sobre Azure</span
+        >.
       </p>
       <p>
-        <span>Unos de mis objetivos es desarollar aplicaciones utiles 
-          para las personas,</span> mi enfoque es asegurar que cada producto que desarollo proporcione la mejor experiencia
-        de usuario posible.
-      </p>
-      <p>Tengo fuertes habilidades para trabajar en equipo, lo que me permite colaborar de manera efectiva
-        para alcanzar nuestro objetivos comunes.
+        <span
+          >Unos de mis objetivos es desarollar aplicaciones utiles para las
+          personas,</span
+        > mi enfoque es asegurar que cada producto que desarollo proporcione la mejor
+        experiencia de usuario posible.
       </p>
       <p>
-        Ademas de la programacion, me gusta tomar buenas fotos, conocer nuevos lugares.
+        Tengo fuertes habilidades para trabajar en equipo, lo que me permite
+        colaborar de manera efectiva para alcanzar nuestro objetivos comunes.
       </p>
+      <p>
+        Ademas de la programacion, me gusta tomar buenas fotos, conocer nuevos
+        lugares.
+      </p>
+    </div>
+    <div class="history__about-me">
+      <h2>Historia</h2>
+      <div class="beginning__history">
+        <div id="beginning">
+          <div class="subtitle__history">
+            <h3>Inicios</h3>
+            <p>Conoce un poco de como empece en el mundo de la prgramacion</p>
+          </div>
+          <div id="icon__history" class="icons__history">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon-left"
+              fill="none"
+              width="25px"
+              height="25px"
+              viewBox="0 0 24 24"
+              stroke-width="1.2"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5 8.25 12l7.5-7.5"></path>
+            </svg>
+          </div>
+        </div>
+        <div id="text__beginning" class="text">
+          <p>
+            Mis primeros pasos en el mundo de la programación los di durante mi
+            tiempo en la universidad, donde me inicié con el lenguaje C++. En
+            ese entonces, mis conocimientos sobre programación no eran muy
+            sólidos. Sin embargo, todo cambió cuando llegué al quinto semestre y
+            me sumergí en una materia que realmente me apasionó: "Desarrollo de
+            aplicaciones web"
+          </p>
+          <p>
+            con lenguaje C# en la cual me toco aprender a las malas, ya que
+            durante la materia tenía que realizar una aplicación de escritorio y
+            con este lenguaje pude desarrollarlo, a través de documentos y
+            videos.
+          </p>
+          <p>
+            A lo mejor la duda como es que decidiste Front-end, más que nada fue
+            en pandemia que decidí sumergirme en el mundo del desarrollo web,
+            después de unas investigaciones y sugerencias opte por Front-end
+            creando páginas web y practicando constantemente hasta alcanzar un
+            buen nivel.
+          </p>
+        </div>
+      </div>
+      <div class="experience__history">
+        <div id="experience">
+          <div class="subtitle__history">
+            <h3>Aprendizaje</h3>
+            <p>Conoce un poco sobre mi incio en la programacion</p>
+          </div>
+          <div class="icons__history">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon-left"
+              fill="none"
+              width="25px"
+              height="25px"
+              viewBox="0 0 24 24"
+              stroke-width="1.2"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5 8.25 12l7.5-7.5"></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon-down"
+              fill="none"
+              width="25px"
+              height="25px"
+              viewBox="0 0 24 24"
+              stroke-width="1.2"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+            </svg>
+          </div>
+        </div>
+        <div id="text__experience" class="text">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique
+            obcaecati minus hic saepe! Possimus fugiat tenetur ratione eveniet
+            neque est! Quibusdam eveniet facere aperiam doloribus iusto?
+            Nesciunt, autem. Itaque, quae.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<script>
+  const content_beginning = document.querySelector("#beginning");
+  const content_experience = document.querySelector("#experience");
+
+  const textBeginning__history = document.querySelector("#text__beginning");
+  const textExperience__history = document.querySelector("#text__experience");
+
+  content_beginning.addEventListener("click", (e: any) => {
+    textBeginning__history.classList.toggle("show-text");
+    textExperience__history.classList.remove("show-text");
+  });
+
+  content_experience.addEventListener("click", (e) => {
+    textExperience__history.classList.toggle("show-text");
+    textBeginning__history.classList.remove("show-text");
+  });
+</script>

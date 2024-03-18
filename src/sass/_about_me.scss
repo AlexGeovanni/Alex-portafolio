@@ -1,42 +1,72 @@
+@use 'variables.scss';
 
-// .about-me{
-//     padding:18px 0;
-//     .content_profile{
-//         display: block;
-//         max-width: 450px;
-//         min-width: 80px;
-//         width: 280px;
-//         padding: 5px;
-//         margin: 0 auto;
-//         & > img{
-//             width: 100%;
-//             height: 100%;
-//             object-fit: cover;
-//             object-position: bottom;
-//         }
-//     }
+.content__about-me div {
+  margin-top: 10px;
 
-//     .about-me__info{
-//         margin-top: 30px;
-//         & h2{
-//             margin-bottom: 10px;
-//         }
-//         & > p:first-of-type{
-//             padding-bottom: 10px;
-//         }
-//     }
+  & > p {
+    line-height: 28px;
+    max-width: 75ch;
+    margin-top: 15px;
+    & > span {
+      font-weight: 600;
+    }
+  }
+}
 
-// }
-
-.content__about-me div{
-    margin-top: 10px;
-
-    & > p{
-        line-height: 28px;
-        max-width: 75ch;
-        margin-top: 15px;
-        & > span{
-            font-weight: 600;
+.history__about-me {
+    
+  .subtitle__history {
+    padding: 0;
+    margin: 0;
+    & p {
+      padding: 0;
+      margin: 0;
+      margin-top: 4px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+  .beginning__history,
+  .experience__history {
+    border: 2px solid variables.$color-border-l;
+    border-radius: 8px;
+    padding: 10px 12px;
+    //box-shadow: 1px 2px 10px -8px rgb(0, 0, 0);
+    cursor: pointer;
+    background-color: #ffffff;
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0 18px;
+    }
+    & div.text {
+        display: block;
+        height: 0px;
+        opacity: 0;
+        overflow: hidden;
+        cursor:auto;
+        & p{
+            max-width: 70ch;
+            line-height: 28px;
         }
     }
+    & div.show-text{
+        height: auto;
+        opacity: 1;
+        transition: height .8s ease,opacity .4s ease;
+    }
+  }
+
+  .icons__history .icon-down {
+    display: none;
+  }
+
+  @media screen and (min-width:768px){
+    .subtitle__history {
+        & p {
+          font-size: 16px;
+        }
+      }
+  }
 }

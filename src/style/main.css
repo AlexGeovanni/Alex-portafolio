@@ -56,6 +56,11 @@ body.dark-mod .content__home > p.sub-title {
 body.dark-mod .content__home p.specialty {
   color: #e8ebec !important;
 }
+body.dark-mod .history__about-me .beginning__history,
+body.dark-mod .history__about-me .experiencie__history {
+  background-color: #212E36;
+  border: 2px solid #2A3B47;
+}
 body.dark-mod .project__content .title__project a svg {
   fill: #C8CDD0;
 }
@@ -390,7 +395,7 @@ header::after {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 25px;
+  padding: 12px 25px;
   background-color: #0a6cad;
   border-radius: 5px;
 }
@@ -540,6 +545,60 @@ header::after {
   font-weight: 600;
 }
 
+.history__about-me .subtitle__history {
+  padding: 0;
+  margin: 0;
+}
+.history__about-me .subtitle__history p {
+  padding: 0;
+  margin: 0;
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 24px;
+}
+.history__about-me .beginning__history,
+.history__about-me .experience__history {
+  border: 2px solid #EDEFF0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+.history__about-me .beginning__history > div,
+.history__about-me .experience__history > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 18px;
+}
+.history__about-me .beginning__history div.text,
+.history__about-me .experience__history div.text {
+  display: block;
+  height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  cursor: auto;
+}
+.history__about-me .beginning__history div.text p,
+.history__about-me .experience__history div.text p {
+  max-width: 70ch;
+  line-height: 28px;
+}
+.history__about-me .beginning__history div.show-text,
+.history__about-me .experience__history div.show-text {
+  height: auto;
+  opacity: 1;
+  transition: height 0.8s ease, opacity 0.4s ease;
+}
+.history__about-me .icons__history .icon-down {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .history__about-me .subtitle__history p {
+    font-size: 16px;
+  }
+}
+
 .tech {
   margin-top: 60px;
 }
@@ -628,7 +687,7 @@ header::after {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 12px;
   background-color: #1083D6;
   z-index: -10;
   transition: 0.2s ease-in-out 0.1s;
@@ -650,6 +709,7 @@ header::after {
   background-color: #fdfdfd;
   border: 2px solid #EDEFF0;
   height: 100%;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
 }

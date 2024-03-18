@@ -85,6 +85,14 @@ body.dark-mod{
         }
     }
 
+    //about me
+    .history__about-me {
+        .beginning__history,
+        .experiencie__history {
+            background-color: variables.$color-box-d;
+            border: 2px solid variables.$color-border-d;
+        }
+    }
 
     // Proyectos
     .project__content{
