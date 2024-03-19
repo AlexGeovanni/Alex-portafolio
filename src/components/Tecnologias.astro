@@ -34,9 +34,9 @@ import { Icons } from "../data/menuItem";
 <script>
   function triggerFuction(entries) {
     entries.forEach((entry) => {
-        if (entry.target.id === "title_tech") {
+        if (entry.target.id == "title_tech") {
           TitleTech(entry);
-        } else if (entry.target.className === "tech__icon") {
+        } else if (entry.target.className == "tech__icon") {
           TechIcons(entry);
         }
       });
