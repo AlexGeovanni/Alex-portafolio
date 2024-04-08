@@ -590,8 +590,16 @@ header::after {
   opacity: 1;
   transition: height 0.8s ease, opacity 0.4s ease;
 }
-.history__about-me .icons__history .icon-down {
-  display: none;
+.history__about-me .icons__history {
+  position: relative;
+}
+.history__about-me .icons__history svg.icon-left {
+  transform: rotate(0deg);
+  transition: all 0.4s ease-in-out;
+}
+.history__about-me .icons__history svg.icon-rotate {
+  transform: rotate(90deg);
+  transition: all 0.3s ease-in-out;
 }
 @media screen and (min-width: 768px) {
   .history__about-me .subtitle__history p {

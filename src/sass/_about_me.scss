@@ -14,7 +14,7 @@
 }
 
 .history__about-me {
-    
+  
   .subtitle__history {
     padding: 0;
     margin: 0;
@@ -58,11 +58,21 @@
     }
   }
 
-  .icons__history .icon-down {
-    display: none;
+  .icons__history{
+    position: relative;
+  }
+  .icons__history svg.icon-left{
+    transform: rotate(0deg);
+    transition: all .4s ease-in-out;
+  }
+  .icons__history svg.icon-rotate{
+    transform: rotate(90deg);
+    transition: all .3s ease-in-out;
   }
 
   @media screen and (min-width:768px){
+
+
     .subtitle__history {
         & p {
           font-size: 16px;

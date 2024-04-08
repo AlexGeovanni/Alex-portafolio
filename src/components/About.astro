@@ -25,12 +25,11 @@
       </p>
     </div>
     <div class="history__about-me">
-      <h2>Historia</h2>
       <div class="beginning__history">
         <div id="beginning">
           <div class="subtitle__history">
-            <h3>Inicios</h3>
-            <p>Conoce un poco de como empece en el mundo de la prgramacion</p>
+            <h3>Mis inicios</h3>
+            <p>Permíteme contarte cómo fue mi introducción al mundo del desarrollo.</p>
           </div>
           <div id="icon__history" class="icons__history">
             <svg
@@ -138,11 +137,11 @@
   //const content_experience = document.querySelector("#experience");
 
   const textBeginning__history = document.querySelector("#text__beginning");
-  const textExperience__history = document.querySelector("#text__experience");
+  const iconSvgLeft__history = document.querySelector("#icon__history svg");
 
   content_beginning.addEventListener("click", (e: any) => {
     textBeginning__history.classList.toggle("show-text");
-    textExperience__history.classList.remove("show-text");
+    iconSvgLeft__history.classList.toggle("icon-rotate")
   });
 
   // content_experience.addEventListener("click", (e) => {

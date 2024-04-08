@@ -62,25 +62,13 @@
 </section>
 
 <script>
-  /*const form = document.querySelector("#contact_form");
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const Nombre = (document.querySelector("#nombre") as HTMLInputElement)
-      .value;
-    const Email = (document.querySelector("#email") as HTMLInputElement).value;
-    const Msj = (document.querySelector("#email") as HTMLInputElement).value;
-
-    window.location.href = `mailto:geovanialex8@gmail.com?subject=envioDesdeFormulario&body=Nombre%3A${Nombre}%0ACorrreo%3A${Email}%0AMensaje%3A${Msj}`;
-  });*/
-  // animate
+  
   const triggerFuction = (entries: any) => {
       entries.forEach((entry: any) => {
         const info = entry.target.querySelector("#info");
         const form = entry.target.querySelector("#contact_form");
         if(entry.isIntersecting){
           info.classList.add("unset");
-          form.classList.add("unset");
         }
 
       });

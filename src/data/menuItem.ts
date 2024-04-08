@@ -160,6 +160,10 @@ export const Icons =[
     {
         nameImg:"figma_img.png",
         title:"Figma"
+    },
+    {
+        nameImg:"postman_img.png",
+        title:"Postman"
     }
     
 ]
