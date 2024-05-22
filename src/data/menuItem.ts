@@ -150,8 +150,8 @@ export const Icons =[
         nameImg:"git_img.png",
         title:"Git"
     },{
-        nameImg:"docker_img.png",
-        title:"Docker"
+        nameImg:"reduxtoolkit_img.png",
+        title:"Redux Toolkit"
     },
     {
         nameImg:"github_img.png",
